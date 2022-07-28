@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Carrusel } from "./component/carrusel";
+import Carrusel from "../component/carrusel";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -12,7 +12,7 @@ export const Home = () => {
       <h1>Hello Rigo!!</h1>
       <Carrusel />
       <p>
-        <img src={rigoImageUrl} />
+    
       </p>
       <div className="alert alert-info">
         {store.message ||
@@ -27,3 +27,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;
