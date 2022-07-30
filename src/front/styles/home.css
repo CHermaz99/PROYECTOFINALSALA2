@@ -5,7 +5,37 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+/* >> comienza css del navbar << */
+
 .my-navbar {
     border: 0;
     border-radius: 0;
+    background: rgba(0, 0, 0, 0.800);
 }
+.my-navbar .navbar-brand {
+    color:white;
+}
+.navbar-brand {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:x-large;
+}
+.my-navbar .navbar-nav li a {
+    color:white;
+}
+.bi-bag-heart {
+    color:white;
+}
+.btn-outline-secondary {
+    width: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+.bi-person-circle {
+    color:white;
+}
+.bi-search {
+    color:white;
+}
+
+/* >> termina css del navbar << */
