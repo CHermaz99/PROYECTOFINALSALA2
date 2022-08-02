@@ -14,12 +14,6 @@ export const Footer = () => (
             INICIO
           </button>
           <button id="contact" type="button" className="btn btn-dark">
-            SOPORTE
-          </button>
-          <button id="contact" type="button" className="btn btn-dark">
-            COMUNIDAD
-          </button>
-          <button id="contact" type="button" className="btn btn-dark">
             CONTACTO
           </button>
         </div>
