@@ -26,11 +26,11 @@ export const Navbar = () => {
 					</ul>
 					<form className="d-flex" role="search">
 						<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-						<button className="btn btn-outline-secondary" type="submit"><i class="bi bi-search fa-lg"></i></button>
+						<button className="btn btn-outline-secondary" type="submit"><i className="bi bi-search fa-lg"></i></button>
 					</form>
 					<div className="botones-user-cart">
-						<button type="button" class="btn btn-outline-secondary"><i class="bi bi-person-circle fa-lg"></i></button>
-						<button type="button" class="btn btn-outline-secondary"><i class="bi bi-bag-heart fa-lg"></i></button>
+						<button type="button" className="btn btn-outline-secondary"><i className="bi bi-person-circle fa-lg"></i></button>
+						<button type="button" className="btn btn-outline-secondary"><i className="bi bi-bag-heart fa-lg"></i></button>
 					</div>
 				</div>
 			</div>
