@@ -32,7 +32,7 @@ const Carousel = () => {
       <div className="carousel-inner">
         <div className="carousel-item active" data-bs-interval="10000">
           <img
-            src="https://www.prada.com/content/dam/pradanux_products/P/P41/P411GR/11LLF0009/P411GR_11LL_F0009_S_222_MDDA.png/_jcr_content/renditions/cq5dam.web.hebebed.1000.1000.jpg"
+            src="https://www.prada.com/content/dam/pradanux/e-commerce/2022/07/co_26/collections/woman/card_1/2x2_DT.jpg/_jcr_content/renditions/cq5dam.web.1680.1680.webp"
             className="d-block w-100"
             alt="..."
           />
