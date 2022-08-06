@@ -19,7 +19,7 @@ class Product(db.Model):
     description = db.Column(db.String(300), unique=False, nullable=False)
     #price = db.Column(db.Float)
     #size = db.Column(db.String(80), unique=False, nullable=False)
-    category_id = (db.Integer)
+    category_id = (db.Integer, ForeignKey(category.id))
 
     
 class Category(db.Model):
