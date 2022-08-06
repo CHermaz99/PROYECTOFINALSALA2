@@ -16,9 +16,9 @@ class Product(db.Model):
     photo_1 = db.Column(db.String(300), unique=False, nullable=False)
     photo_2 = db.Column(db.String(300), unique=False, nullable=False)
     name = db.Column(db.String(120), unique=True, nullable=False)
-    description = db.Column(db.String(300), unique=False, nullable=False)
-    #price = db.Column(db.Float)
-    #size = db.Column(db.String(80), unique=False, nullable=False)
+    description = db.Column(db.String(300))
+    price = db.Column(db.Float)
+    size = db.Column(db.String(80), unique=False, nullable=False)
     category_id = (db.Integer)
 
     
