@@ -3,25 +3,24 @@ import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import Carousel from "../component/carrusel";
+import Form from "../component/form";
+import Client from "../component/client";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
 
   return (
     <div className="container-fluid">
-      <div class="container">
+      <p className="principal mt-20"><h2><b>Descubre nuestras novedades</b></h2></p>
+      <div class="container mt-10">
         <Carousel />
       </div>
-      <div className="alert alert-info">
-        {store.message ||
-          "Loading message from the backend (make sure your python backend is running)..."}
+      <div className="container">
+        <Form/>
       </div>
-      <p>
-        This boilerplate comes with lots of documentation:{" "}
-        <a href="https://github.com/4GeeksAcademy/react-flask-hello/tree/95e0540bd1422249c3004f149825285118594325/docs">
-          Read documentation
-        </a>
-      </p>
+      <div>
+       <Client/>
+        </div>
     </div>
   );
 };
