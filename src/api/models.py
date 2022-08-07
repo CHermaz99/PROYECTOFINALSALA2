@@ -38,6 +38,7 @@ class Product(db.Model):
             'id': self.id,
             'name': self.name,
             'price': self.price,
+            'image': self.image,
         }
 
     # >> Product(db.Model) (siguiendo el video de Marcos no veo ésto necesario) <<
@@ -68,4 +69,3 @@ class Order(db.Model):
     discount = db.Column(db.Boolean(), unique=False, nullable=False)
     total_price = db.Column(db.Integer)
     status_delivery = db.Column(db.String(120), unique=True, nullable=False)
-    

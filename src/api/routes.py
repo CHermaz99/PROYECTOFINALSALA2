@@ -17,11 +17,12 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
-    @api.route('/product', methods=['GET'])
-    def get_products():
-        products = Product.query.all()
-        data = []
-        for product in products:
-            data.append(product.serialize())
-
-        return jsonify(data), 200
+@api.route('/product', methods=['GET'])
+def get_products():
+    products = Product.query.all()
+  # Para buscar solo los productos activos >> products = Product.query.filter_by(is_active=True) <<
+    data = []
+    for product in products:
+        data.append(product.serialize())
+  # Otra forma de hacerlo mas corta es >> data = [product.serialize() for product in products] <<
+    return jsonify(data), 200
