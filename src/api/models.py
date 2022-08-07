@@ -11,6 +11,16 @@ class User(db.Model):
     address = db.Column(db.String(120), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), default=True)
 
+    def __repr__(self):
+        return f'<User {self.email}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "email": self.email,
+            # do not serialize the password, its a security breach
+        }
+
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True, nullable=False)  
@@ -23,7 +33,14 @@ class Product(db.Model):
     def __repr__(self):
         return f'<Product {self.name}>'
 
-    # >> Comienza el comentario del class Product(db.Model) siguiendo el video de Marcos no veo ésto necesario <<
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'price': self.price,
+        }
+
+    # >> Product(db.Model) (siguiendo el video de Marcos no veo ésto necesario) <<
 
     #photo_2 = db.Column(db.String(300), unique=False, nullable=False)
     #price = db.Column(db.Float)
@@ -51,14 +68,4 @@ class Order(db.Model):
     discount = db.Column(db.Boolean(), unique=False, nullable=False)
     total_price = db.Column(db.Integer)
     status_delivery = db.Column(db.String(120), unique=True, nullable=False)
-   
-
-    def __repr__(self):
-        return f'<User {self.email}>'
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "email": self.email,
-            # do not serialize the password, its a security breach
-        }
+    
