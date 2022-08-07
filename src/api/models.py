@@ -11,15 +11,44 @@ class User(db.Model):
     address = db.Column(db.String(120), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), default=True)
 
+    def __repr__(self):
+        return f'<User {self.email}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "email": self.email,
+            # do not serialize the password, its a security breach
+        }
+
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    photo_1 = db.Column(db.String(300), unique=False, nullable=False)
-    photo_2 = db.Column(db.String(300), unique=False, nullable=False)
-    name = db.Column(db.String(120), unique=True, nullable=False)
-    description = db.Column(db.String(300), unique=False, nullable=False)
+    name = db.Column(db.String(120), unique=True, nullable=False)  
+    description = db.Column(db.String(250))
+    stock = db.Column(db.Integer)
+    is_active = db.Column(db.Boolean, default=True)
+    image = db.Column(db.String(250))
+    price = db.Column(db.Float)
+
+    def __repr__(self):
+        return f'<Product {self.name}>'
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'price': self.price,
+            'image': self.image,
+        }
+
+    # >> Product(db.Model) (siguiendo el video de Marcos no veo ésto necesario) <<
+
+    #photo_2 = db.Column(db.String(300), unique=False, nullable=False)
     #price = db.Column(db.Float)
     #size = db.Column(db.String(80), unique=False, nullable=False)
-    category_id = (db.Integer, ForeignKey(category.id))
+    #category_id = (db.Integer, ForeignKey(category.id))
+
+    # >> Termina el comentario del class Product(db.Model) <<
 
     
 class Category(db.Model):
@@ -40,14 +69,3 @@ class Order(db.Model):
     discount = db.Column(db.Boolean(), unique=False, nullable=False)
     total_price = db.Column(db.Integer)
     status_delivery = db.Column(db.String(120), unique=True, nullable=False)
-   
-
-    def __repr__(self):
-        return f'<User {self.email}>'
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "email": self.email,
-            # do not serialize the password, its a security breach
-        }
