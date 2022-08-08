@@ -10,7 +10,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Carrusel from "./component/carrusel";
-import PaginaRegistro from "./pages/paginaRegistro.js";
+import { PaginaRegistro } from "./pages/paginaRegistro.js";
 
 //create your first component
 const Layout = () => {
