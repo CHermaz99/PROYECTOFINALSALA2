@@ -1,10 +1,13 @@
-import { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { Context } from "../store/appContext";
 import "../../styles/index.css";
 import Product from "../component/product";
 
 export const CategoryWomensWare = () => {
-    const { store } = useContext(Context);
+    const { store, actions } = useContext(Context);
+    useEffect(() => {
+       actions.getProducts()
+    },[])
 
     return (
         <div className="container">
