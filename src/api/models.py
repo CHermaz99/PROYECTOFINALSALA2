@@ -47,16 +47,6 @@ class Product(db.Model):
             'price': self.price,
             'image': self.image,
         }
-
-    # >> Product(db.Model) (siguiendo el video de Marcos no veo ésto necesario) <<
-
-    #photo_2 = db.Column(db.String(300), unique=False, nullable=False)
-    #price = db.Column(db.Float)
-    #size = db.Column(db.String(80), unique=False, nullable=False)
-    #category_id = (db.Integer, ForeignKey(category.id))
-
-    # >> Termina el comentario del class Product(db.Model) <<
-
     
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
