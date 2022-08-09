@@ -11,7 +11,7 @@ export const Home = () => {
 
   return (
     <div className="container-fluid">
-      <p className="principal mt-20"><h2><b>Descubre nuestras novedades</b></h2></p>
+      <p className="principal mt-20"><h2><b>Descubre nuestras marcas</b></h2></p>
       <div class="container mt-10">
         <Carousel />
       </div>
