@@ -10,13 +10,15 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import Carrusel from "./component/carrusel";    
+import Carrusel from "./component/carrusel";
+import PaginaRegistro from "./pages/paginaRegistro.js";
 
 //create your first component
 const Layout = () => {
-    //the basename is used when your project is published in a subdirectory and not in the root of the domain
-    // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
-    const basename = process.env.BASENAME || "";
+  //the basename is used when your project is published in a subdirectory and not in the root of the domain
+  // you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
+  const basename = process.env.BASENAME || "";
+
 
     return (
         <div>
@@ -28,6 +30,7 @@ const Layout = () => {
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<CategoryWomensWare />} path="/category" />
+                        <Route element={<PaginaRegistro />} path="/registro" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     <Footer />
