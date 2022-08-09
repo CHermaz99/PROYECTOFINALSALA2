@@ -13,10 +13,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			products: [],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
+			getProducts: () => {
+				// Otra forma de poner la url seria >> https://3001-chermaz99-proyectofinal-blwubh6zyn9.ws-eu59.gitpod.io/api/product << (No es recomendable)
+				fetch(process.env.BACKEND_URL + "/api/product")
+				.then((data) => data.json())
+				.then((data) => setStore({products: data}));
+			},
+
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
