@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User, Product
+from api.models import db, User, Product, Category
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -25,4 +25,25 @@ def get_products():
     for product in products:
         data.append(product.serialize())
   # Otra forma de hacerlo mas corta es >> data = [product.serialize() for product in products] <<
+    return jsonify(data), 200
+
+    
+@api.route('/user', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    data = []
+    for user in users:
+      data.append(user.serialize())
+
+    return jsonify(data), 200
+
+
+    
+@api.route('/category', methods=['GET'])
+def get_categories():
+    categories = Category.query.all()
+    data = []
+    for category in categories:
+      data.append(category.serialize())
+
     return jsonify(data), 200
