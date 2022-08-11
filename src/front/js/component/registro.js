@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Registro = () => {
   // UseEffect hace envío y verifica información
   // UseState envio y activación al registrar
+
+  const [text1, setText1] = useState("");
+  const [text2, setText2] = useState("");
+  const [text3, setText3] = useState("");
+  const [text4, setText4] = useState("");
+  const [text5, setText5] = useState("");
+  const [text6, setText6] = useState("");
+  const [text7, setText7] = useState("");
+
   return (
     <>
       <form className="form-control">
@@ -20,6 +30,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText1(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -33,6 +46,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText2(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -45,6 +61,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText3(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -57,6 +76,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText4(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -69,6 +91,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText5(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -81,6 +106,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText6(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -93,6 +121,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              onChange={(event) => {
+                setText7(event.target.value);
+              }}
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-lg"
@@ -104,9 +135,15 @@ const Registro = () => {
             <button type="button" className="btn btn-light btn-lg">
               CONTINUE
             </button>
-            <button type="button" className="btn btn-light btn-lg">
-              SIGN IN
-            </button>
+            <Link to="/login">
+              <button
+                type="button"
+                className="btn btn-light btn-lg"
+                onClick={() => alert("Sign in")}
+              >
+                SIGN IN
+              </button>
+            </Link>
           </div>
         </div>
       </form>

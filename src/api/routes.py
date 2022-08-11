@@ -37,6 +37,18 @@ def get_users():
 
     return jsonify(data), 200
 
+@api.route('/user', methods=['POST'])
+def post_users():
+    data = request.json()
+    print(data)
+
+    user = User.query.filter_by(name=data['name'],
+    email=data['email'], password=data['password'], 
+    phone_number=data['phone_number'], address=data['address']).first()
+    
+    return jsonify(user.serialize), 200
+    access_token = create_access_token(identity=user.id)
+
 
     
 @api.route('/category', methods=['GET'])
