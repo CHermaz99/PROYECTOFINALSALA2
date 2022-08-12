@@ -58,6 +58,7 @@ class Category(db.Model):
     def serialize(self):
         return {
         'id': self.id,
+        'name': self.name,
     }
    
 class Items(db.Model):
