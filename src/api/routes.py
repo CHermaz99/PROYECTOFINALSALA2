@@ -38,18 +38,17 @@ def get_users():
     return jsonify(data), 200
 
 @api.route('/user', methods=['POST'])
-def post_users():
-    data = request.json()
-    print(data)
-
-    user = User.query.filter_by(name=data['name'],
-    email=data['email'], password=data['password'], 
-    phone_number=data['phone_number'], address=data['address']).first()
+def create_user():
+    name = request.json.get("name", None)
+    user = User(name= name, phone_number=data.get('phone_number'), email=data.get('email'), 
+    address=data.get('address'), password=data.get('password'))
+    db.session.add(user)
+    db.session.commit()
+    #Hacer el token
+    return jsonify({"message": "Bienvenido a DaRooms"}), 200
+  
     
-    return jsonify(user.serialize), 200
-    access_token = create_access_token(identity=user.id)
-
-
+  
     
 @api.route('/category', methods=['GET'])
 def get_categories():

@@ -5,17 +5,17 @@ const Registro = () => {
   // UseEffect hace envío y verifica información
   // UseState envio y activación al registrar
 
-  const [text1, setText1] = useState("");
-  const [text2, setText2] = useState("");
-  const [text3, setText3] = useState("");
-  const [text4, setText4] = useState("");
-  const [text5, setText5] = useState("");
-  const [text6, setText6] = useState("");
-  const [text7, setText7] = useState("");
+  const [text, setText] = useState({});
 
   return (
     <>
-      <form className="form-control">
+      <form
+        className="form-control"
+        onSubmit={(event) => {
+          event.preventDefault();
+          console.log(text);
+        }}
+      >
         <div className="container col-8">
           <br></br>
           <br></br>
@@ -30,8 +30,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="nombre"
               onChange={(event) => {
-                setText1(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -46,8 +47,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="phone_number"
               onChange={(event) => {
-                setText2(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -61,8 +63,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="email"
               onChange={(event) => {
-                setText3(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -76,8 +79,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="address"
               onChange={(event) => {
-                setText4(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -91,8 +95,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="pass"
               onChange={(event) => {
-                setText5(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -106,8 +111,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="confirm"
               onChange={(event) => {
-                setText6(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -121,8 +127,9 @@ const Registro = () => {
             </span>
             <input
               type="text"
+              name="text7"
               onChange={(event) => {
-                setText7(event.target.value);
+                setText({ ...text, [event.target.name]: event.target.value });
               }}
               className="form-control"
               aria-label="Sizing example input"
@@ -132,9 +139,7 @@ const Registro = () => {
           <br></br>
           <br></br>
           <div className="container-fluid col-6">
-            <button type="button" className="btn btn-light btn-lg">
-              CONTINUE
-            </button>
+            <input type="submit" className="vamos" value="registrate" />
             <Link to="/login">
               <button
                 type="button"

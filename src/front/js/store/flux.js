@@ -15,7 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
       ],
       products: [],
-      user: "",
+      user: {},
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ products: data }));
       },
 
-      getUser: () => {
+      postUser: () => {
         fetch(process.env.BACKEND_URL + "/api/user")
           .then((data) => data.json())
           .then((data) => setStore({ user: data }));
