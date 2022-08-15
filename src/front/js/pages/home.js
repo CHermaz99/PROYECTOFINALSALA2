@@ -11,15 +11,16 @@ export const Home = () => {
 
   return (
     <div className="container-fluid">
-      <p className="principal mt-20"><h2><b> DESCUBRE DA ROOM'S</b></h2></p>
+      <p className="principal mt-20"><h2> DESCUBRE DA ROOM'S</h2></p>
       <div class="container mt-10">
         <Carousel />
       </div>
       <div className="container">
-        <Form/>
+        <p className="segundo"><h2>LOS PRODUCTOS MÁS DESTACADOS</h2></p>
+      <Client/>
       </div>
-      <div>
-       <Client/>
+      <div className="container">
+       <Form/>
         </div>
     </div>
   );
