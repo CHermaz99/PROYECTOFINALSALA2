@@ -40,8 +40,10 @@ def get_users():
 @api.route('/user', methods=['POST'])
 def create_user():
     name = request.json.get("name", None)
-    user = User(name= name, phone_number=data.get('phone_number'), email=data.get('email'), 
-    address=data.get('address'), password=data.get('password'))
+    phone_number = request.json.get("phone_number", None)
+    email = request.json.get("email", None)
+    address = request.json.get("address", None)
+    user = User(name= name, phone_number= phone_number, email= email, address= address)
     db.session.add(user)
     db.session.commit()
     #Hacer el token
