@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/index.css";
 import Product from "../component/product";
@@ -7,8 +7,10 @@ import { Link, useParams } from "react-router-dom";
 export const CategoryWomensWare = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
+  const [category, setCategory] = useState(params.id);
   useEffect(() => {
-    actions.getProducts(params.id);
+    if (store.activeCategory != params.id) {console.log(store.activeCategory)}
+    actions.getProducts(store.activeCategory)
     console.log(params.id);
   }, []);
 

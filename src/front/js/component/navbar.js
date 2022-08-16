@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import {}
 import "../../styles/home.css";
 
 export const Navbar = () => {
@@ -35,6 +36,7 @@ export const Navbar = () => {
                 <li className="nav-item" key={index}>
                   <Link className="nav-link" to={`/category/${category.id}`}>
                     {category.name}
+                   
                   </Link>
                 </li>
               );

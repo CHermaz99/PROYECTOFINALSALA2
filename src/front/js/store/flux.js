@@ -15,6 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
       ],
       products: [],
+      activeCategory: 1,
     },
     actions: {
       // Use getActions to call a function within a fuction
