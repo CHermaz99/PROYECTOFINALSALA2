@@ -1,62 +1,69 @@
 const getState = ({ getStore, getActions, setStore }) => {
-	return {
-		store: {
-			message: null,
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
-			products: [],
-		},
-		actions: {
-			// Use getActions to call a function within a fuction
-			getProducts: () => {
-				// Otra forma de poner la url seria >> https://3001-chermaz99-proyectofinal-blwubh6zyn9.ws-eu59.gitpod.io/api/product << (No es recomendable)
-				fetch(process.env.BACKEND_URL + "/api/product")
-				.then((data) => data.json())
-				.then((data) => setStore({products: data}));
-			},
+  return {
+    store: {
+      message: null,
+      demo: [
+        {
+          title: "FIRST",
+          background: "white",
+          initial: "white",
+        },
+        {
+          title: "SECOND",
+          background: "white",
+          initial: "white",
+        },
+      ],
+      products: [],
+      user: {},
+    },
+    actions: {
+      // Use getActions to call a function within a fuction
+      getProducts: () => {
+        // Otra forma de poner la url seria >> https://3001-chermaz99-proyectofinal-blwubh6zyn9.ws-eu59.gitpod.io/api/product << (No es recomendable)
+        fetch(process.env.BACKEND_URL + "/api/product")
+          .then((data) => data.json())
+          .then((data) => setStore({ products: data }));
+      },
 
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
+      postUser: () => {
+        fetch(process.env.BACKEND_URL + "/api/user")
+          .then((data) => data.json())
+          .then((data) => setStore({ user: data }));
+      },
 
-			getMessage: async () => {
-				try{
-					// fetching data from the backend
-					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
-					const data = await resp.json()
-					setStore({ message: data.message })
-					// don't forget to return something, that is how the async resolves
-					return data;
-				}catch(error){
-					console.log("Error loading message from backend", error)
-				}
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
+      exampleFunction: () => {
+        getActions().changeColor(0, "green");
+      },
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+      getMessage: async () => {
+        try {
+          // fetching data from the backend
+          const resp = await fetch(process.env.BACKEND_URL + "/api/hello");
+          const data = await resp.json();
+          setStore({ message: data.message });
+          // don't forget to return something, that is how the async resolves
+          return data;
+        } catch (error) {
+          console.log("Error loading message from backend", error);
+        }
+      },
+      changeColor: (index, color) => {
+        //get the store
+        const store = getStore();
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
-		}
-	};
+        //we have to loop the entire demo array to look for the respective index
+        //and change its color
+        const demo = store.demo.map((elm, i) => {
+          if (i === index) elm.background = color;
+          return elm;
+        });
+
+        //reset the global store
+        setStore({ demo: demo });
+      },
+    },
+  };
 };
 
 export default getState;
