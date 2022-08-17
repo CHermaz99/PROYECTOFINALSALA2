@@ -43,11 +43,15 @@ def create_user():
     phone_number = request.json.get("phone_number", None)
     email = request.json.get("email", None)
     address = request.json.get("address", None)
-    user = User(name= name, phone_number= phone_number, email= email, address= address)
-    db.session.add(user)
-    db.session.commit()
-    #Hacer el token
-    return jsonify({"message": "Bienvenido a DaRooms"}), 200
+    password = request.json.get("password", None)
+    user = User(name= name, phone_number= phone_number, email= email, address= address, password= password)
+    try:
+      db.session.add(user)
+      db.session.commit()
+      return jsonify({"message": "Bienvenido a DaRooms"}), 201
+    except Exception as err:
+      print(str(err))    
+      return jsonify({"message": str(err)}), 500
   
     
   

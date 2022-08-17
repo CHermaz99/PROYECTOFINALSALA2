@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 const Registro = () => {
   // UseEffect hace envío y verifica información
   // UseState envio y activación al registrar
-
+  const navigate = useNavigate();
+  const { store, actions } = useContext(Context);
   const [text, setText] = useState({});
 
   return (
@@ -14,6 +15,9 @@ const Registro = () => {
         onSubmit={(event) => {
           event.preventDefault();
           console.log(text);
+          actions.create_user(text).then(() => {
+            navigate("/");
+          });
         }}
       >
         <div className="container col-8">
@@ -30,7 +34,7 @@ const Registro = () => {
             </span>
             <input
               type="text"
-              name="nombre"
+              name="name"
               onChange={(event) => {
                 setText({ ...text, [event.target.name]: event.target.value });
               }}
@@ -95,7 +99,7 @@ const Registro = () => {
             </span>
             <input
               type="text"
-              name="pass"
+              name="password"
               onChange={(event) => {
                 setText({ ...text, [event.target.name]: event.target.value });
               }}

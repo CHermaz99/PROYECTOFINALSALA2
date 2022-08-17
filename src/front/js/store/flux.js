@@ -32,6 +32,26 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ user: data }));
       },
 
+      create_user: async (data) => {
+        const resp = await fetch(process.env.BACKEND_URL + "/api/user", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+        if (resp.status == 201) {
+          const data = await resp.json();
+          {
+            /**localStorage.setItem("token", data.access_token);
+        setStore({token:data.access_token}) */
+          }
+        } else {
+          alert("El usuario ya existe");
+        }
+      },
+
       exampleFunction: () => {
         getActions().changeColor(0, "green");
       },
