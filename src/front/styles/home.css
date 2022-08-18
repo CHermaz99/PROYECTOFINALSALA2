@@ -750,10 +750,11 @@ h3.h3 {
 
   margin-top: 35px;
 
+  float: left;
+
   text-shadow: none;
 
   outline: none !important;
-  float: left;
 }
 
 .register-photo form .btn-primary:hover,
