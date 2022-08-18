@@ -1,11 +1,11 @@
 import React from "react";
-import Registro from "../component/registro";
+import Login from "../component/login";
 
-export const PaginaRegistro = () => {
+export const PaginaLogin = () => {
   return (
     <div className="container">
       <div className="row">
-        <Registro />
+        <Login />
       </div>
     </div>
   );

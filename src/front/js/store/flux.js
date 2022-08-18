@@ -15,6 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
       ],
       products: [],
+      user: {},
       activeCategory: 1,
     },
     actions: {
@@ -24,6 +25,32 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch(process.env.BACKEND_URL + "/api/product-category/" + id)
           .then((data) => data.json())
           .then((data) => setStore({ products: data }));
+      },
+
+      postUser: () => {
+        fetch(process.env.BACKEND_URL + "/api/user")
+          .then((data) => data.json())
+          .then((data) => setStore({ user: data }));
+      },
+
+      create_user: async (data) => {
+        const resp = await fetch(process.env.BACKEND_URL + "/api/user", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+        if (resp.status == 201) {
+          const data = await resp.json();
+          {
+            /**localStorage.setItem("token", data.access_token);
+        setStore({token:data.access_token}) */
+          }
+        } else {
+          alert("El usuario ya existe");
+        }
       },
 
       exampleFunction: () => {
