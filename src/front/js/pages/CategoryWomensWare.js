@@ -7,12 +7,10 @@ import { Link, useParams } from "react-router-dom";
 export const CategoryWomensWare = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
-  const [category, setCategory] = useState(params.id);
   useEffect(() => {
-    if (store.activeCategory != params.id) {console.log(store.activeCategory)}
-    actions.getProducts(store.activeCategory)
+    actions.getProducts(params.id);
     console.log(params.id);
-  }, []);
+  }, [params.id]);
 
   return (
     <div className="container">
