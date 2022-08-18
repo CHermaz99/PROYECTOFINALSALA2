@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
-    return <div className="card">
+    return <div className="card7">
         <img src={props.image} className="card-img-top" alt="..." />
         <div className="card-body">
             <h5 className="card-title">{props.name}</h5>
