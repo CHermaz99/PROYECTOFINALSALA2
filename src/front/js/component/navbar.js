@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import {}
 import "../../styles/home.css";
 
 export const Navbar = () => {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    fetch(process.env.BACKEND_URL + "/api/category")
+      .then((response) => response.json())
+      .then((data) => {
+        setCategories(data);
+      });
+  }, []);
   return (
     <nav className="navbar navbar-expand-lg sticky-top my-navbar">
       <div className="container-fluid">
@@ -22,21 +31,16 @@ export const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                WomensWear
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                MensWear
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Sneakers
-              </a>
-            </li>
+            {categories.map((category, index) => {
+              return (
+                <li className="nav-item" key={index}>
+                  <Link className="nav-link" to={`/category/${category.id}`}>
+                    {category.name}
+                   
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <form className="d-flex" role="search">
             <input

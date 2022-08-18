@@ -16,12 +16,13 @@ const getState = ({ getStore, getActions, setStore }) => {
       ],
       products: [],
       user: {},
+      activeCategory: 1,
     },
     actions: {
       // Use getActions to call a function within a fuction
-      getProducts: () => {
+      getProducts: (id) => {
         // Otra forma de poner la url seria >> https://3001-chermaz99-proyectofinal-blwubh6zyn9.ws-eu59.gitpod.io/api/product << (No es recomendable)
-        fetch(process.env.BACKEND_URL + "/api/product")
+        fetch(process.env.BACKEND_URL + "/api/product-category/" + id)
           .then((data) => data.json())
           .then((data) => setStore({ products: data }));
       },

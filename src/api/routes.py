@@ -26,7 +26,23 @@ def get_products():
         data.append(product.serialize())
   # Otra forma de hacerlo mas corta es >> data = [product.serialize() for product in products] <<
     return jsonify(data), 200
+  
+@api.route('/product-category/<id>', methods=['GET'])
+def get_product_by_category(id):
+    products = Product.query.filter_by(category_id = id)
+    data = []
+    for product in products:
+        data.append(product.serialize())
+    return jsonify(data), 200
 
+@api.route('/category', methods=['GET'])
+def get_category():
+    categories = Category.query.all()
+    data = []
+    for category in categories:
+        data.append(category.serialize())
+        
+    return jsonify(data), 200
     
 @api.route('/user', methods=['GET'])
 def get_users():
@@ -52,15 +68,5 @@ def create_user():
     except Exception as err:
       print(str(err))    
       return jsonify({"message": str(err)}), 500
-  
-    
-  
-    
-@api.route('/category', methods=['GET'])
-def get_categories():
-    categories = Category.query.all()
-    data = []
-    for category in categories:
-      data.append(category.serialize())
 
     return jsonify(data), 200
