@@ -2,113 +2,76 @@ import React from "react";
 
 const Registro = () => {
   return (
-    <div className="container col-8">
-      <br></br>
-      <br></br>
-      <div className="container col-6">
-        <h1>UNETE AL CLUB</h1>
-      </div>
-      <br></br>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Name
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Phone Number
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Email
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Address
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Pass
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Confirm Pass
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <div className="input-group input-group-lg">
-        <span className="input-group-text" id="inputGroup-sizing-lg">
-          Large
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-      </div>
-      <br></br>
-      <br></br>
-      <div className="container-fluid col-6">
-        <button type="button" className="btn btn-light btn-lg">
-          CONTINUE
-        </button>
-        <button type="button" className="btn btn-light btn-lg">
-          SIGN IN
-        </button>
-      </div>
-      <div className="container-fluid col-4">
-        <img
-          src="https://m.media-amazon.com/images/I/41mx67OkorS._AC_SL1500_.jpg"
-          className="d-block w-100"
-          alt="..."
-        />
+    <div className="register-photo">
+      <div className="form-container">
+        <div className="image-holder"></div>
+        <form>
+          <h2 className="text-center">
+            <strong>Adentrate</strong> en Da Room's!
+          </h2>
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="name"
+              name="name"
+              placeholder="Nombre"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="number"
+              name="number"
+              placeholder="Telefono"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="dirección"
+              name="dirección"
+              placeholder="Dirección"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              type="password"
+              name="password-repeat"
+              placeholder="Password (repeat)"
+            />
+          </div>
+          <div className="form-group">
+            <div className="form-check">
+              <label className="form-check-label">
+                <input className="form-check-input" type="checkbox" />I agree to
+                the license terms.
+              </label>
+            </div>
+          </div>
+          <div className="form-group">
+            <button className="btn btn-primary btn-block">Sign Up</button>
+          </div>
+          <a className="already" href="#">
+            You already have an account? Login here.
+          </a>
+        </form>
       </div>
     </div>
   );
