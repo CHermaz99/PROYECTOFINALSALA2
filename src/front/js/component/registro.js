@@ -13,16 +13,13 @@ const Registro = () => {
       <div className="form-container">
         <div className="image-holder"></div>
 
-        <form
-          className="form-control"
+        <form className="form-control">
           onSubmit={(event) => {
             event.preventDefault();
             console.log(text);
-            actions.create_user(text).then(() => {
-              navigate("/");
-            });
-          }}
-        >
+            actions.create_user(text).then(() => {navigate("/");});
+          }};
+        
           <h2 className="text-center">
             <strong>Adentrate</strong>
             <br></br>
