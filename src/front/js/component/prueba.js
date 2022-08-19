@@ -13,21 +13,21 @@ const Registro = () => {
       <div className="form-container">
         <div className="image-holder"></div>
 
-        <form className="form-control">
-          onSubmit=
-          {(event) => {
+        <form
+          className="form-control"
+          onSubmit={(event) => {
             event.preventDefault();
             console.log(text);
             actions.create_user(text).then(() => {
               navigate("/");
             });
           }}
-          ;
+        >
           <h2 className="text-center">
             <strong>Adentrate</strong>
-            <br></br>
             en Da Room's!
           </h2>
+
           <div className="form-group">
             <input
               type="text"
@@ -39,6 +39,7 @@ const Registro = () => {
               placeholder="Name"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -50,6 +51,7 @@ const Registro = () => {
               placeholder="Phone Number"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -61,6 +63,7 @@ const Registro = () => {
               placeholder="Email"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -72,6 +75,7 @@ const Registro = () => {
               placeholder="Address"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -83,6 +87,7 @@ const Registro = () => {
               placeholder="Password"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -94,27 +99,30 @@ const Registro = () => {
               placeholder="Confirm Password"
             />
           </div>
+
           <div className="form-group">
             <div className="form-check">
               <label className="form-check-label">
-                <input className="form-check-input" type="checkbox" />
-                De acuerdo con los términos de uso
+                <input className="form-check-input" type="checkbox" />I agree to
+                the license terms.
               </label>
             </div>
           </div>
+
           <div className="form-group">
             <button
               type="submit"
               value="registrate"
               className="btn btn-primary btn-block"
-              onClick={() => alert("Sign in")}
             >
-              Regístrate
+              onClick={() => alert("Sign in")}
+              <Link to="/login"></Link>
+              Sign Up
             </button>
           </div>
-          <br></br>
-          <a className="already" href="/login">
-            ¿Ya tienes cuenta? <h5>Entra si ya eres usuario</h5>
+
+          <a className="already" href="#">
+            You already have an account? Login here.
           </a>
         </form>
       </div>
