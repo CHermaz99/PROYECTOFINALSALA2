@@ -47,6 +47,16 @@ class Product(db.Model):
             'price': self.price,
             'image': self.image,
         }
+
+    def serialize_detial(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'price': self.price,
+            'image': self.image,
+            'stock': self.stock,
+            'description': self.description
+        }
     
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)

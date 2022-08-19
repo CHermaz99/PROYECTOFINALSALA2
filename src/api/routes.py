@@ -26,6 +26,11 @@ def get_products():
         data.append(product.serialize())
   # Otra forma de hacerlo mas corta es >> data = [product.serialize() for product in products] <<
     return jsonify(data), 200
+
+@api.route('/product/<int:id>', methods=['GET'])
+def product_detail(id):
+  product = Product.query.get(id)
+  return jsonify(product.serialize_detial()), 200
   
 @api.route('/product-category/<id>', methods=['GET'])
 def get_product_by_category(id):
