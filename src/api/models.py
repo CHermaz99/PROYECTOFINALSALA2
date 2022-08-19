@@ -28,7 +28,7 @@ class User(db.Model):
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True, nullable=False)  
-    description = db.Column(db.String(250))
+    description = db.Column(db.String(300))
     stock = db.Column(db.Integer)
     is_active = db.Column(db.Boolean, default=True)
     image = db.Column(db.String(250))
