@@ -15,45 +15,76 @@ const Login = () => {
   }, []);
 
   return (
-    <form>
-      <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
-          className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-        />
-        <div id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
+    <div className="register-photo">
+    <div className="form-container">
+      <div className="image-holder"></div>
+
+      <form
+        className="form-control"
+        onSubmit={(event) => {
+          event.preventDefault();
+          console.log(text);
+          actions.create_user(text).then(() => {
+            navigate("/");
+          });
+        }}
+      >
+        <h2 className="text-center">
+          <strong>Bienvenid@</strong>
+          <br></br>
+          a Da Room's!
+        </h2>
+        <div className="form-group">
+          <input
+            type="text"
+            name="email"
+            onChange={(event) => {
+              setText({ ...text, [event.target.name]: event.target.value });
+            }}
+            className="form-control"
+            placeholder="Email"
+          />
         </div>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          className="form-control"
-          id="exampleInputPassword1"
-        />
-      </div>
-      <div className="mb-3 form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="exampleCheck1"
-        />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
+
+     
+
+        <div className="form-group">
+          <input
+            type="text"
+            name="password"
+            onChange={(event) => {
+              setText({ ...text, [event.target.name]: event.target.value });
+            }}
+            className="form-control"
+            placeholder="Password"
+          />
+        </div>
+
+
+        <div className="form-group">
+          <div className="form-check">
+            <label className="form-check-label">
+              <input className="form-check-input" type="checkbox" />
+              De acuerdo con los términos de uso
+            </label>
+          </div>
+        </div>
+
+        <div className="form-group">
+          <button
+            type="submit"
+            value="registrate"
+            className="btn btn-primary btn-block"
+            onClick={() => alert("Sign in")}
+          >
+            Entrar
+          </button>
+        </div>
+        <br></br>
+       
+      </form>
+    </div>
+  </div>
   );
 };
 
