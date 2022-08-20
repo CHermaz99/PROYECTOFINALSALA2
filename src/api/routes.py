@@ -75,3 +75,11 @@ def create_user():
       return jsonify({"message": str(err)}), 500
 
     return jsonify(data), 200
+
+@api.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    print(data)
+    user = User.query.filter_by(email= data['email'], password= data['password']).first()
+    
+    return jsonify(user.serialize()), 200
