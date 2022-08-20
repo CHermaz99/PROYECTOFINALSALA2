@@ -758,7 +758,7 @@ h3.h3 {
 }
 
 .register-photo form .already {
-  display: block;
+  display: flex;
 
   text-align: center;
 

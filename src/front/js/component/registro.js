@@ -13,21 +13,22 @@ const Registro = () => {
       <div className="form-container">
         <div className="image-holder"></div>
 
-        <form className="form-control">
-          onSubmit=
-          {(event) => {
+        <form
+          className="form-control"
+          onSubmit={(event) => {
             event.preventDefault();
             console.log(text);
             actions.create_user(text).then(() => {
               navigate("/");
             });
           }}
-          ;
+        >
           <h2 className="text-center">
             <strong>Adentrate</strong>
             <br></br>
             en Da Room's!
           </h2>
+
           <div className="form-group">
             <input
               type="text"
@@ -39,6 +40,7 @@ const Registro = () => {
               placeholder="Name"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -50,6 +52,7 @@ const Registro = () => {
               placeholder="Phone Number"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -61,6 +64,7 @@ const Registro = () => {
               placeholder="Email"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -72,6 +76,7 @@ const Registro = () => {
               placeholder="Address"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -83,6 +88,7 @@ const Registro = () => {
               placeholder="Password"
             />
           </div>
+
           <div className="form-group">
             <input
               type="text"
@@ -94,6 +100,7 @@ const Registro = () => {
               placeholder="Confirm Password"
             />
           </div>
+
           <div className="form-group">
             <div className="form-check">
               <label className="form-check-label">
@@ -102,6 +109,7 @@ const Registro = () => {
               </label>
             </div>
           </div>
+
           <div className="form-group">
             <button
               type="submit"
