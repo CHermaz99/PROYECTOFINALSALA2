@@ -53,6 +53,26 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+      login: async (data) => {
+        const logeo = await fetch(process.env.BACKEND_URL + "/api/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+        if (logeo.status == 201) {
+          const data = await logeo.json();
+          {
+            /**localStorage.setItem("token", data.access_token);
+        setStore({token:data.access_token}) */
+          }
+        } else {
+          alert("Error");
+        }
+      },
+
       exampleFunction: () => {
         getActions().changeColor(0, "green");
       },
