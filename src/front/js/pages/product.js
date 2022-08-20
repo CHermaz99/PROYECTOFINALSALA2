@@ -17,7 +17,7 @@ export const Product = () => {
     return product ? (
         <div className="container">
             <div className="row">
-                <div class="card col-12">
+                <div class="card8 col-12">
                     <img src={product.image} class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">{product.name}</h5>
