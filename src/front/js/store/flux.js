@@ -69,7 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({token:data.access_token}) */
           }
         } else {
-          alert("El usuario ya existe");
+          alert("Error");
         }
       },
 

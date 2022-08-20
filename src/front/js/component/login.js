@@ -29,12 +29,16 @@ const Login = () => {
             });
           }}
         >
+          <br></br>
+          <br></br>
           <h2 className="text-center">
-            <strong>Hola!</strong>
+            <strong>Bienvenid@</strong>
             <br></br>
-            entra a Da Room's!
+            <br></br>a Da Room's!
           </h2>
 
+          <br></br>
+          <br></br>
           <div className="form-group">
             <input
               type="text"
@@ -46,7 +50,7 @@ const Login = () => {
               placeholder="Email"
             />
           </div>
-
+          <br></br>
           <div className="form-group">
             <input
               type="text"
@@ -58,7 +62,7 @@ const Login = () => {
               placeholder="Password"
             />
           </div>
-
+          <br></br>
           <div className="form-group">
             <button
               type="submit"
@@ -66,8 +70,14 @@ const Login = () => {
               className="btn btn-primary btn-block"
               onClick={() => alert("Login")}
             >
-              Entra a DaRoom's
+              Entrar
             </button>
+            <br></br>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
           </div>
         </form>
       </div>
