@@ -4,7 +4,7 @@ import "../../styles/index.css";
 import Product from "../component/product";
 import { Link, useParams } from "react-router-dom";
 
-export const CategoryWomensWare = () => {
+export const Categories = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
   useEffect(() => {

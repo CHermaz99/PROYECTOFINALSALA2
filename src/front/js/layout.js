@@ -5,7 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
-import { CategoryWomensWare } from "./pages/CategoryWomensWare";
+import { Categories } from "./pages/Categories";
 import { Product } from "./pages/product";
 import injectContext from "./store/appContext";
 
@@ -30,7 +30,7 @@ const Layout = () => {
             <Route element={<Home />} path="/" />
             <Route element={<Demo />} path="/demo" />
             <Route element={<Single />} path="/single/:theid" />
-            <Route element={<CategoryWomensWare />} path="/category/:id" />
+            <Route element={<Categories />} path="/category/:id" />
             <Route element={<PaginaRegistro />} path="/registro" />
             <Route element={<PaginaLogin />} path="/login" />
             <Route element={<Product />} path="/product/:id" />
