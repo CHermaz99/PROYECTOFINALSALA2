@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 const Login = () => {
-  const [login, setLogin] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      "https://3001-chermaz99-proyectofinal-an2uc8ne5v5.ws-eu60.gitpod.io/api/login/"
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        setLogin(response);
-      });
-  }, []);
+  const navigate = useNavigate();
+  const { store, actions } = useContext(Context);
+  const [text, setText] = useState({});
 
   return (
     <div className="register-photo">

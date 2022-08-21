@@ -45,8 +45,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         if (resp.status == 201) {
           const data = await resp.json();
           {
-            /**localStorage.setItem("token", data.access_token);
-        setStore({token:data.access_token}) */
+            localStorage.setItem("token", access_token);
+            setStore({ token: data.access_token });
           }
         } else {
           alert("El usuario ya existe");
@@ -65,8 +65,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         if (logeo.status == 201) {
           const data = await logeo.json();
           {
-            /**localStorage.setItem("token", data.access_token);
-        setStore({token:data.access_token}) */
+            localStorage.setItem("token", access_token);
+            setStore({ token: data.access_token });
           }
         } else {
           alert("Error");
