@@ -1,11 +1,11 @@
 import React from "react";
-import AreaPersonal from "../component/areaPersonal";
+import Personal from "../component/personal";
 
-export const PaginaAreaPersonal = () => {
+export const PaginaPersonal = () => {
   return (
     <div className="container">
       <div className="row">
-        <AreaPersonal />
+        <Personal />
       </div>
     </div>
   );

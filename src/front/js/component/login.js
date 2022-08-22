@@ -12,15 +12,15 @@ const Login = () => {
       <div className="form-container">
         <div className="image-holder"></div>
 
-        <form
+        <div
           className="form-control"
-          onSubmit={(event) => {
+          /*  onSubmit={(event) => {
             event.preventDefault();
             console.log(text);
-            actions.create_user(text).then(() => {
+            actions.login(text).then(() => {
               navigate("/");
             });
-          }}
+          }} */
         >
           <br></br>
           <br></br>
@@ -61,7 +61,11 @@ const Login = () => {
               type="submit"
               value="registrate"
               className="btn btn-primary btn-block"
-              onClick={() => alert("Login")}
+              onClick={() => {
+                actions.login(text).then(() => {
+                  navigate("/");
+                });
+              }}
             >
               Entrar
             </button>
@@ -72,7 +76,7 @@ const Login = () => {
             <br></br>
             <br></br>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

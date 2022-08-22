@@ -71,7 +71,9 @@ def create_user():
     try:
       db.session.add(user)
       db.session.commit()
-      return jsonify({"message": "Bienvenido a DaRooms"}), 201
+      access_token = create_access_token(identity=user.id)
+
+      return jsonify({"message": "Bienvenido a DaRooms", "token": access_token}), 201
     except Exception as err:
       print(str(err))    
       return jsonify({"message": str(err)}), 500
@@ -84,10 +86,10 @@ def login():
     print(data)
     user = User.query.filter_by(email= data['email'], password= data['password']).first()
     if not user:
-      return jsonify({"message": "Tu email o contraseña no son correctos"}), 400
+      return jsonify({"message": "Tu email o contraseña no son correctos", "loged": False}), 400
     access_token = create_access_token(identity=user.id)
     
-    return jsonify({"token": access_token}), 200
+    return jsonify({"token": access_token, "loged": True}), 200
 
 
 

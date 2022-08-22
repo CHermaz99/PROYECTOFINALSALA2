@@ -17,6 +17,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       products: [],
       user: {},
       activeCategory: 1,
+      token: null,
+      loged: false,
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -42,32 +44,33 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
           body: JSON.stringify(data),
         });
-        if (resp.status == 201) {
+        if (resp.ok) {
           const data = await resp.json();
-          {
-            localStorage.setItem("token", access_token);
-            setStore({ token: data.access_token });
-          }
+
+          localStorage.setItem("token", data.token);
+          setStore({ token: data.token });
         } else {
           alert("El usuario ya existe");
         }
       },
 
-      login: async (data) => {
+      login: async (user) => {
+        console.log("hola");
         const logeo = await fetch(process.env.BACKEND_URL + "/api/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json",
+            /* Authorization: "Bearer" + token, */
           },
-          body: JSON.stringify(data),
+          body: JSON.stringify(user),
         });
-        if (logeo.status == 201) {
+        console.log(logeo);
+        if (logeo.ok) {
           const data = await logeo.json();
-          {
-            localStorage.setItem("token", access_token);
-            setStore({ token: data.access_token });
-          }
+          console.log(data);
+
+          localStorage.setItem("token", data.token);
+          setStore({ token: data.token, loged: data.loged });
         } else {
           alert("Error");
         }

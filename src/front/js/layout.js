@@ -14,6 +14,7 @@ import { Footer } from "./component/footer";
 import Carrusel from "./component/carrusel";
 import { PaginaRegistro } from "./pages/paginaRegistro.js";
 import { PaginaLogin } from "./pages/paginaLogin";
+import { PaginaPersonal } from "./pages/paginaPersonal";
 
 //create your first component
 const Layout = () => {
@@ -33,7 +34,8 @@ const Layout = () => {
             <Route element={<CategoryWomensWare />} path="/category/:id" />
             <Route element={<PaginaRegistro />} path="/registro" />
             <Route element={<PaginaLogin />} path="/login" />
-            <Route element={<Product />} path="/product/:id" />z
+            <Route element={<Product />} path="/product/:id" />
+            <Route element={<PaginaPersonal />} path="/personal" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />
