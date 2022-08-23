@@ -1,33 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 const Login = () => {
-  const [login, setLogin] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      "https://3001-chermaz99-proyectofinal-an2uc8ne5v5.ws-eu60.gitpod.io/api/login/"
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        setLogin(response);
-      });
-  }, []);
+  const navigate = useNavigate();
+  const { store, actions } = useContext(Context);
+  const [text, setText] = useState({});
 
   return (
     <div className="register-photo">
       <div className="form-container">
         <div className="image-holder"></div>
 
-        <form
+        <div
           className="form-control"
-          onSubmit={(event) => {
+          /*  onSubmit={(event) => {
             event.preventDefault();
             console.log(text);
-            actions.create_user(text).then(() => {
+            actions.login(text).then(() => {
               navigate("/");
             });
-          }}
+          }} */
         >
           <br></br>
           <br></br>
@@ -68,7 +61,11 @@ const Login = () => {
               type="submit"
               value="registrate"
               className="btn btn-primary btn-block"
-              onClick={() => alert("Login")}
+              onClick={() => {
+                actions.login(text).then(() => {
+                  navigate("/");
+                });
+              }}
             >
               Entrar
             </button>
@@ -79,7 +76,7 @@ const Login = () => {
             <br></br>
             <br></br>
           </div>
-        </form>
+        </div>
       </div>
     </div>
  
