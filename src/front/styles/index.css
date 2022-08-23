@@ -1,3 +1,5 @@
+/* Comienza el CSS del carrito de compras */
+
 .box {
     padding: 1rem;
     margin: 1rem;
@@ -8,3 +10,5 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
+
+/* Termina el CSS del carrito de compras */
