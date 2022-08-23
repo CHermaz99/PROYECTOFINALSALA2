@@ -666,7 +666,7 @@ h3.h3 {
 .register-photo .image-holder {
   display: table-cell;
 
-  width: auto;
+  width: 400px;
 
   background: url(https://i.imgur.com/oPdIpLH.jpg);
 
