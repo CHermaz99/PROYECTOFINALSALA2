@@ -7,7 +7,6 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import { Categories } from "./pages/Categories";
 import { Product } from "./pages/product";
-import { ShoppingCart } from "./pages/ShoppingCart";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -35,7 +34,6 @@ const Layout = () => {
             <Route element={<PaginaRegistro />} path="/registro" />
             <Route element={<PaginaLogin />} path="/login" />
             <Route element={<Product />} path="/product/:id" />
-            <Route element={<ShoppingCart />} path="/carrito" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />

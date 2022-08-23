@@ -47,7 +47,7 @@ export const Navbar = () => {
                 <i className="bi bi-person-circle fa-lg"></i>
               </button>
             </Link>
-            <Link to="/carrito">
+            <Link to="/">
               <button type="button" className="btn btn-outline-secondary">
                 <i className="bi bi-bag-heart fa-lg"></i>
               </button>
