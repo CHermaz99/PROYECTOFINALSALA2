@@ -857,3 +857,189 @@ label.radio input:checked + span {
   width: 500px;
 }
 /*TERMINA EL CSS DE COPONENT PRODUCT.JS */
+/* empieza el css de PAGE PRODUCT */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+.card5 {
+  width: 100%;
+}
+.price span {
+  font-size: 18px;
+}
+.cut {
+  text-decoration: line-through;
+  color: red;
+}
+.icons i {
+  font-size: 17px;
+  color: green;
+  margin-right: 2px;
+}
+.offers i {
+  color: green;
+}
+.flex-row {
+  flex-direction: row!important;
+  justify-content: center;
+}
+.mt-2 {
+  margin-top: 0.5rem!important;
+  justify-content: center;
+}
+.titulop {
+  font-size: 1.5rem;
+  margin-top: auto;
+}
+label.radio {
+  cursor: pointer;
+}
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+label.radio span {
+  padding: 2px 11px;
+  margin-right: 3px;
+  border: 1px solid #8f37aa;
+  display: inline-block;
+  color: #8f37aa;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+label.radio input:checked + span {
+  border-color: #8f37aa;
+  background-color: #8f37aa;
+  color: #fff;
+}
+.col-md-7 {
+  flex: 0 0 auto;
+  text-align: center;
+  display: grid;
+  width: 58.33333333%;
+}
+.fondop{
+  background: url(https://img.freepik.com/foto-gratis/fondo-simple-textura-abstracta-neutral_53876-102511.jpg?w=2000);
+}
+/*ACABA EL CSS DE PAGE PRODUCT.JS */
+
+#loader {
+  bottom: 0;
+  height: 175px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 175px;
+}
+#loader {
+  bottom: 0;
+  height: 175px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 175px;
+}
+#loader .dot {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 90px;
+}
+#loader .dot::before {
+  border-radius: 100%;
+  content: "";
+  height: 90px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(0);
+  width: 87.5px;
+}
+#loader .dot:nth-child(7n+1) {
+  transform: rotate(45deg);
+}
+#loader .dot:nth-child(7n+1)::before {
+  animation: 2s linear 0.3s normal none infinite running load;
+  background: #EE82EE none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+2) {
+  transform: rotate(90deg);
+}
+#loader .dot:nth-child(7n+2)::before {
+  animation: 2s linear 0.3s normal none infinite running load;
+  background: #DA70D6  none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+3) {
+  transform: rotate(135deg);
+}
+#loader .dot:nth-child(7n+3)::before {
+  animation: 2s linear 0.4s normal none infinite running load;
+  background: #FF00FF none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+4) {
+  transform: rotate(180deg);
+}
+#loader .dot:nth-child(7n+4)::before {
+  animation: 2s linear 0.5s normal none infinite running load;
+  background: #BA55D3 none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+5) {
+  transform: rotate(225deg);
+}
+#loader .dot:nth-child(7n+5)::before {
+  animation: 2s linear 0.6s normal none infinite running load;
+  background: #9400D3 none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+6) {
+  transform: rotate(270deg);
+}
+#loader .dot:nth-child(7n+6)::before {
+  animation: 2s linear 0.7s normal none infinite running load;
+  background: #9932CC none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+7) {
+  transform: rotate(315deg);
+}
+#loader .dot:nth-child(7n+7)::before {
+  animation: 2s linear 0.8s normal none infinite running load;
+  background: #8B008B none repeat scroll 0 0;
+}
+#loader .dot:nth-child(7n+8) {
+  transform: rotate(360deg);
+}
+#loader .dot:nth-child(7n+8)::before {
+  animation: 2s linear 0.9s normal none infinite running load;
+  background: #800080 none repeat scroll 0 0;
+}
+#loader .lading {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  bottom: -40px;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 180px;
+}
+@keyframes load {
+100% {
+  opacity: 0;
+  transform: scale(1);
+}
+}
+@keyframes load {
+100% {
+  opacity: 0;
+  transform: scale(1);
+}
+}
