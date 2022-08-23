@@ -1,4 +1,5 @@
-import { useReducer } from "react";
+import React, { useReducer } from "react";
+import CartItem from "./CartItem";
 import { TYPES } from "../actions/shoppingAction";
 import {
   shoppingInitialState,
