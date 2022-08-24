@@ -17,6 +17,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       products: [],
       user: {},
       activeCategory: 1,
+      token: null,
+      loged: false,
       cart: [],
     },
     actions: {
@@ -28,6 +30,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ products: data }));
       },
       
+      addToCart: (product) => {
+        const store = getStore()
+        setStore({ cart: [...store.cart, product]})
+      },
+
+      removeToCart: (productId) => {
+        const store = getStore() 
+        const products = store.cart.filter(c => c.id === productId);
+        setStore({ cart: products})
+      },
+
       addToCart: (product) => {
         const store = getStore()
         setStore({ cart: [...store.cart, product]})
@@ -54,14 +67,35 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
           body: JSON.stringify(data),
         });
-        if (resp.status == 201) {
+        if (resp.ok) {
           const data = await resp.json();
-          {
-            /**localStorage.setItem("token", data.access_token);
-        setStore({token:data.access_token}) */
-          }
+
+          localStorage.setItem("token", data.token);
+          setStore({ token: data.token });
         } else {
           alert("El usuario ya existe");
+        }
+      },
+
+      login: async (user) => {
+        console.log("hola");
+        const logeo = await fetch(process.env.BACKEND_URL + "/api/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            /* Authorization: "Bearer" + token, */
+          },
+          body: JSON.stringify(user),
+        });
+        console.log(logeo);
+        if (logeo.ok) {
+          const data = await logeo.json();
+          console.log(data);
+
+          localStorage.setItem("token", data.token);
+          setStore({ token: data.token, loged: data.loged });
+        } else {
+          alert("Error");
         }
       },
 

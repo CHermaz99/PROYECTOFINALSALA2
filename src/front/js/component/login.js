@@ -1,59 +1,85 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 const Login = () => {
-  const [login, setLogin] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      "https://3001-chermaz99-proyectofinal-an2uc8ne5v5.ws-eu60.gitpod.io/api/user/"
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        setLogin(response);
-      });
-  }, []);
+  const navigate = useNavigate();
+  const { store, actions } = useContext(Context);
+  const [text, setText] = useState({});
 
   return (
-    <form>
-      <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
+    <div className="register-photo">
+      <div className="form-container">
+        <div className="image-holder"></div>
+
+        <div
           className="form-control"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-        />
-        <div id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
+          /*  onSubmit={(event) => {
+            event.preventDefault();
+            console.log(text);
+            actions.login(text).then(() => {
+              navigate("/");
+            });
+          }} */
+        >
+          <br></br>
+          <br></br>
+          <h2 className="text-center">
+            <strong>Bienvenid@</strong>
+            <br></br>
+            <br></br>a Da Room's!
+          </h2>
+
+          <br></br>
+          <br></br>
+          <div className="form-group">
+            <input
+              type="text"
+              name="email"
+              onChange={(event) => {
+                setText({ ...text, [event.target.name]: event.target.value });
+              }}
+              className="form-control"
+              placeholder="Email"
+            />
+          </div>
+          <br></br>
+          <div className="form-group">
+            <input
+              type="text"
+              name="password"
+              onChange={(event) => {
+                setText({ ...text, [event.target.name]: event.target.value });
+              }}
+              className="form-control"
+              placeholder="Password"
+            />
+          </div>
+          <br></br>
+          <div className="form-group">
+            <button
+              type="submit"
+              value="registrate"
+              className="btn btn-primary btn-block"
+              onClick={() => {
+                actions.login(text).then(() => {
+                  navigate("/");
+                });
+              }}
+            >
+              Entrar
+            </button>
+            <br></br>
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
         </div>
       </div>
-      <div className="mb-3">
-        <label htmlFor="exampleInputPassword1" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          className="form-control"
-          id="exampleInputPassword1"
-        />
-      </div>
-      <div className="mb-3 form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="exampleCheck1"
-        />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          Check me out
-        </label>
-      </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
+    </div>
+ 
   );
 };
 

@@ -100,7 +100,7 @@ const Registro = () => {
               placeholder="Confirm Password"
             />
           </div>
-
+          <br></br>
           <div className="form-group">
             <div className="form-check">
               <label className="form-check-label">
@@ -122,8 +122,9 @@ const Registro = () => {
           </div>
           <br></br>
           <a className="already" href="/login">
-            ¿Ya tienes cuenta? <h5>Entra si ya eres usuario</h5>
+            ¿Tienes cuenta?<h5>Entra si ya eres usuario</h5>
           </a>
+          <br></br>
         </form>
       </div>
     </div>
