@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const CartItem = ({ data, delFromCart }) => {
-  let { id, name, price, quantity } = data;
+  let { id, name, price, description, image } = data;
 
   return (
     <div style={{ borderBottom: "thin solid gray" }}>
       <h4>{name}</h4>
-      <h5>
-        ${price}.00 x {quantity} = ${price * quantity}.00
-      </h5>
-      <button onClick={() => delFromCart(id)}>Eliminar Uno</button>
-      <br />
-      <button onClick={() => delFromCart(id, true)}>Eliminar Todos</button>
-      <br />
-      <br />
+      <h5>{price}</h5>
+      <button onClick={() => delFromCart()}>Eliminar producto</button>
     </div>
   );
 };

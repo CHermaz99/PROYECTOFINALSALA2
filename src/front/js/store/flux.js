@@ -35,20 +35,13 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ cart: [...store.cart, product]})
       },
 
-      removeToCart: (productId) => {
-        const store = getStore() 
-        const products = store.cart.filter(c => c.id === productId);
-        setStore({ cart: products})
-      },
-
-      addToCart: (product) => {
-        const store = getStore()
-        setStore({ cart: [...store.cart, product]})
+      clearCart: () => {
+        setStore({ cart: []})
       },
 
       removeToCart: (productId) => {
         const store = getStore() 
-        const products = store.cart.filter(c => c.id === productId);
+        const products = store.cart.filter(c => c.id != productId);
         setStore({ cart: products})
       },
 

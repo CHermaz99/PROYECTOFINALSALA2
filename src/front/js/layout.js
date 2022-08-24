@@ -8,16 +8,14 @@ import { Categories } from "./pages/Categories";
 import { Product } from "./pages/product";
 import { PaginaRegistro } from "./pages/paginaRegistro.js";
 import { PaginaLogin } from "./pages/paginaLogin";
+import { Cart } from "./pages/cart";
 
 import injectContext from "./store/appContext";
-import App from "./App";
 
 import ScrollToTop from "./component/scrollToTop";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Carrusel from "./component/carrusel";
-import { PaginaRegistro } from "./pages/paginaRegistro.js";
-import { PaginaLogin } from "./pages/paginaLogin";
 import { PaginaPersonal } from "./pages/paginaPersonal";
 
 //create your first component
@@ -40,7 +38,7 @@ const Layout = () => {
             <Route element={<PaginaLogin />} path="/login" />
             <Route element={<Product />} path="/product/:id" />
             <Route element={<PaginaPersonal />} path="/personal" />
-            <Route element={<App />} path="/carrito" />
+            <Route element={<Cart />} path="/carrito" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />
