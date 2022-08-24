@@ -17,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       products: [],
       user: {},
       activeCategory: 1,
+      cart: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -25,6 +26,17 @@ const getState = ({ getStore, getActions, setStore }) => {
         fetch(process.env.BACKEND_URL + "/api/product-category/" + id)
           .then((data) => data.json())
           .then((data) => setStore({ products: data }));
+      },
+      
+      addToCart: (product) => {
+        const store = getStore()
+        setStore({ cart: [...store.cart, product]})
+      },
+
+      removeToCart: (productId) => {
+        const store = getStore() 
+        const products = store.cart.filter(c => c.id === productId);
+        setStore({ cart: products})
       },
 
       postUser: () => {
