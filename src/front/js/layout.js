@@ -1,19 +1,21 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import { Categories } from "./pages/Categories";
 import { Product } from "./pages/product";
+import { PaginaRegistro } from "./pages/paginaRegistro.js";
+import { PaginaLogin } from "./pages/paginaLogin";
+import { Cart } from "./pages/cart";
+
 import injectContext from "./store/appContext";
 
+import ScrollToTop from "./component/scrollToTop";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Carrusel from "./component/carrusel";
-import { PaginaRegistro } from "./pages/paginaRegistro.js";
-import { PaginaLogin } from "./pages/paginaLogin";
 import { PaginaPersonal } from "./pages/paginaPersonal";
 
 //create your first component
@@ -36,6 +38,7 @@ const Layout = () => {
             <Route element={<PaginaLogin />} path="/login" />
             <Route element={<Product />} path="/product/:id" />
             <Route element={<PaginaPersonal />} path="/personal" />
+            <Route element={<Cart />} path="/carrito" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />
