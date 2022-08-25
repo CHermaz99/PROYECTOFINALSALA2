@@ -982,15 +982,6 @@ label.radio input:checked + span {
   color: #8bc5ff;
   cursor: pointer
 }
-.labels {
-  font-size: 11px;
-}
-.add-experience:hover {
-  background: #6eadff;
-  color: #fff;
-  cursor: pointer;
-  border: solid 1px #b8e6ff
-}
 
 /*ACABA EL CSS DE MI PERFIL */
 
@@ -1174,6 +1165,7 @@ label.radio input:checked + span {
 }
 
 /*left-side-start*/
+
 .left-side .line1{
   height:350px;
   width:100%;
@@ -1275,6 +1267,8 @@ label.radio input:checked + span {
  
   transform:scale(1.3);
 }
+
+
 .stats1 span{
   font-size:12px;
  font-weight:600;
