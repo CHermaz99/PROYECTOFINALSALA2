@@ -202,7 +202,65 @@ const Personal = () => {
         </div>
     </div>
         </div>
-        <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">..gssss.</div>
+        <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+        <div class="container9">
+    <div class="card9">
+        <div class="form">
+            <div class="left-side">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+                <div class="contact-us">
+                    <p>Contact Us</p>
+                    <span></span>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="top-div">
+                    <h2>  ¿Tienes dudas? </h2>
+                    <p> Ponte en contacto con nosotros y te solucionaremos tus preguntas en menos de 24H.</p>
+                </div>
+                <div class="stats">
+                    <div class="stats1">
+                        <i class="fa fa-map-marker"></i>
+                        <span> Gran Via,12. Madrid </span>
+                    </div>
+                    <div class="stats1">
+                        <i class="fa fa-phone"></i>
+                        <span>+34 1203 153</span>
+                    </div>
+                    <div class="stats1">
+                        <i class="fa fa-envelope"></i>
+                        <span> daroomscontact@.es</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span>
+                        <div class="input-text">
+                            <input type="text" required="required"/>
+                            <small>Nombre</small>
+                        </div>   
+                         <div class="input-text">
+                            <input type="text" required="required"/>
+                            <small>E-mail</small>
+                        </div>   
+                        <div class="textarea">
+                            <textarea required="required"></textarea>
+                            <small>Tu duda</small>
+                        </div>
+                      
+                    </span>
+                </div>
+                <div class="buttons">
+                    <button>SEND</button>
+                </div>
+            
+
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
       </div></>
 
   );
