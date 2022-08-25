@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+// Importar aquí las pages //
+
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
@@ -9,14 +11,16 @@ import { Product } from "./pages/product";
 import { PaginaRegistro } from "./pages/paginaRegistro.js";
 import { PaginaLogin } from "./pages/paginaLogin";
 import { Cart } from "./pages/cart";
+import { PaginaPersonal } from "./pages/paginaPersonal";
 
 import injectContext from "./store/appContext";
+
+// Importar aquí los component //
 
 import ScrollToTop from "./component/scrollToTop";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Carrusel from "./component/carrusel";
-import { PaginaPersonal } from "./pages/paginaPersonal";
 
 //create your first component
 const Layout = () => {
