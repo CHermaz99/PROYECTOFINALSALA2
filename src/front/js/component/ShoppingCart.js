@@ -9,6 +9,8 @@ const ShoppingCart = () => {
       <h3>Carrito</h3>
       <article className="box">
         <button onClick={() => actions.clearCart()}>Limpiar Carrito</button>
+        <br />
+        <br />
         {store.cart.map((item, index) => (
           <CartItem
             key={index}

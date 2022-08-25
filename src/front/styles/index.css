@@ -10,5 +10,9 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
+.imageCart {
+    width: 10%;
+    height: 10%;
+}
 
 /* Termina el CSS del carrito de compras */

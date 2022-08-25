@@ -1,4 +1,4 @@
-/* >> comienza css del navbar << */
+/* comienza css del navbar */
 
 .my-navbar {
   border: 0;
@@ -30,20 +30,18 @@
   color: white;
 }
 
-/* >> termina css del navbar << */
+/* termina css del navbar */
 
 /* empieza el css del form */
 
 body {
   font-family: "Montserrat", sans-serif;
 }
-
 button:focus {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-
 a,
 a:hover {
   text-decoration: none;
@@ -51,24 +49,20 @@ a:hover {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 img {
   display: inline-block;
   max-width: 100%;
 }
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1300px;
   }
 }
-
 #main-form {
   margin-top: 20px;
   text-shadow: 1px 2px 3px #0000001f;
   text-align: -webkit-center;
 }
-
 #main-form h5 {
   font-size: 3rem;
   font-family: inherit;
@@ -76,7 +70,6 @@ img {
   -webkit-animation: leftToRight 1s ease-in-out 0.5s;
   animation: leftToRight 1s ease-in-out 0.5s;
 }
-
 #main-form h2 {
   font-weight: 900;
   font-family: inherit;
@@ -84,7 +77,6 @@ img {
   -webkit-animation: topToBottom 1s linear 0.3s;
   animation: topToBottom 1s linear 0.3s;
 }
-
 #main-form .carousel-caption {
   right: 15%;
   bottom: unset;
@@ -93,7 +85,6 @@ img {
   transform: translateY(-50%);
   text-align: left;
 }
-
 #main-form .carousel-control-next,
 #main-form .carousel-control-prev {
   top: 50%;
@@ -107,17 +98,14 @@ img {
   -webkit-transition: 5s all;
   transition: 5s all;
 }
-
 #main-form .carousel-control-next {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
-
 #main-form .carousel-control-prev {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-
 #main-form .btn-info {
   background: transparent;
   text-transform: uppercase;
@@ -128,7 +116,6 @@ img {
   padding: 20px 0 0;
   margin: 20px 0 0;
 }
-
 #main-form .btn-info::before {
   content: "";
   position: absolute;
@@ -138,7 +125,6 @@ img {
   height: 5px;
   background-color: #fff;
 }
-
 .home__form {
   padding: 1.5rem;
   background-color: #fff;
@@ -151,30 +137,24 @@ img {
   width: 80%;
   margin: auto;
 }
-
 .home__form h3 {
   font-weight: bold;
 }
-
 .home__form p {
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
-
 .home__form form {
   text-align: left;
 }
-
 .home__form form label {
   font-size: 1.4rem;
   color: rgba(0, 0, 0, 0.7);
   font-family: "helveticaregular";
 }
-
 .home__form form .input-box {
   position: relative;
 }
-
 .home__form form .input-box .fa {
   position: absolute;
   right: 0;
@@ -185,11 +165,9 @@ img {
   padding: 3px 15px 3px 10px;
   color: #898989;
 }
-
 .home__form form .input-box input {
   height: 45px;
 }
-
 .home__form form .input-box textarea,
 .home__form form .input-box input {
   border-color: #efefef;
@@ -200,18 +178,15 @@ img {
   padding: 10px;
   caret-color: #fc5546;
 }
-
 .home__form form .input-box textarea:focus + .fa,
 .home__form form .input-box input:focus + .fa {
   color: #fc5546;
   border-color: #fc5546;
 }
-
 .home__form form .input-box textarea:not(:placeholder-shown),
 .home__form form .input-box input:not(:placeholder-shown) {
   border-color: green;
 }
-
 .btn.btn-danger {
   width: 100%;
   height: 45px;
@@ -222,21 +197,17 @@ img {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
-
 .btn.btn-danger:hover {
   background: #231833;
 }
-
 .btn-more {
   font-size: 1.6rem;
   color: #000;
   font-family: "helveticaregular";
 }
-
 .btn-more span {
   border-bottom: 1px dotted #000;
 }
-
 @-webkit-keyframes leftToRight {
   0% {
     opacity: 0;
@@ -254,7 +225,6 @@ img {
     transform: translateX(0);
   }
 }
-
 @keyframes leftToRight {
   0% {
     opacity: 0;
@@ -272,7 +242,6 @@ img {
     transform: translateX(0);
   }
 }
-
 @-webkit-keyframes topToBottom {
   0% {
     opacity: 0;
@@ -290,7 +259,6 @@ img {
     transform: translateY(0);
   }
 }
-
 @keyframes topToBottom {
   0% {
     opacity: 0;
@@ -308,9 +276,10 @@ img {
     transform: translateY(0);
   }
 }
+
 /* termina el css del form */
 
-/* empieza el css client */
+/* empieza el css del client */
 
 img {
   width: 100%;
@@ -327,7 +296,6 @@ h3.h3 {
   text-transform: capitalize;
   font-size: 1.7em;
 }
-
 .demo {
   padding: 45px 0;
 }
@@ -491,7 +459,8 @@ h3.h3 {
   }
 }
 
-/* acaba el css de client */
+/* Termina el css de client */
+
 .principal {
   text-align: center;
   padding-bottom: 0px;
@@ -508,7 +477,6 @@ h3.h3 {
   filter: contrast(30);
   background-color: transparent;
 }
-
 .segundo h2 {
   font-size: 30px;
   font-weight: 200;
@@ -516,16 +484,13 @@ h3.h3 {
   color: black;
   animation: animate 2s infinite alternate;
 }
-
 @keyframes animate {
   0% {
     letter-spacing: 3px;
   }
-
   50% {
     letter-spacing: 4px;
   }
-
   100% {
     letter-spacing: 3px;
   }
@@ -534,14 +499,12 @@ h3.h3 {
   padding: 0;
   margin: 0;
 }
-
 .principal {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
 }
-
 .principal h2 {
   background: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80)
     no-repeat;
@@ -549,7 +512,8 @@ h3.h3 {
   -webkit-text-fill-color: transparent;
   font-size: 42px;
 }
-/* carousel */
+
+/* Comienza el CSS del carousel */
 
 .wrapper {
   width: 100%;
@@ -558,7 +522,6 @@ h3.h3 {
   justify-content: center;
   align-items: center;
 }
-
 .card {
   height: 80%;
   width: 100vh;
@@ -569,7 +532,6 @@ h3.h3 {
   cursor: pointer;
   text-align: center !important;
 }
-
 .card::before {
   position: absolute;
   width: 100%;
@@ -580,12 +542,10 @@ h3.h3 {
   transform: skewY(345deg);
   transition: 2s ease-in;
 }
-
 .card:hover::before {
   top: -70%;
   transform: skewY(390deg);
 }
-
 .card .image {
   position: absolute;
 
@@ -594,16 +554,13 @@ h3.h3 {
   justify-content: center;
   align-items: center;
 }
-
 .card .image img {
   max-width: 100%;
   transition: 2s ease-in;
 }
-
 .card:hover .image img {
   width: 80%;
 }
-
 .about-product {
   position: absolute;
   color: #fff;
@@ -612,11 +569,9 @@ h3.h3 {
   left: 20%;
   transition: 2s ease-in;
 }
-
 .card:hover .about-product {
   bottom: 20px !important;
 }
-
 .buy-now {
   color: #fff;
   background-color: #ef5350 !important;
@@ -624,156 +579,106 @@ h3.h3 {
   width: 160px;
   margin-top: 20px;
 }
-
 .buy-now:focus {
   box-shadow: none;
 }
-
 .buy-now:hover {
   color: #fff;
   background-color: #e84040 !important;
   border-color: #e84040 !important;
 }
-/*empieza css de registro*/
+
+/* Termina el CSS del carousel */
+
+/* Empieza css del registro */
 
 .register-photo {
   background: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
-
   padding: 80px 0;
 }
-
 @media (max-width: 576px) {
   .register-photo .image-holder {
     display: table-cell;
-
     width: auto;
-
     background-size: cover;
-
     display: none !important;
   }
 }
-
 .register-photo .image-holder {
   display: table-cell;
-
   width: 400px;
-
   background: url(https://i.imgur.com/oPdIpLH.jpg);
-
   background-size: cover;
 }
-
 .register-photo .form-container {
   display: table;
-
   max-width: 900px;
-
   width: 90%;
-
   margin: 0 auto;
-
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
-
 .register-photo form {
   display: table-cell;
-
   width: 400px;
-
   background-color: #ffffff;
-
   padding: 40px 60px;
-
   color: #505e6c;
 }
-
 @media (max-width: 991px) {
   .register-photo form {
     padding: 40px;
   }
 }
-
 .register-photo form h2 {
   font-size: 24px;
-
   line-height: 1.5;
-
   margin-bottom: 30px;
 }
-
 .register-photo form .form-control {
   background: transparent;
-
   border: none;
-
   border-bottom: 1px solid #dfe7f1;
-
   border-radius: 0;
-
   box-shadow: none;
-
   outline: none;
-
   color: inherit;
-
   text-indent: 6px;
-
   height: 40px;
 }
-
 .register-photo form .form-check {
   font-size: 13px;
-
   line-height: 20px;
 }
-
 .register-photo form .btn-primary {
   background: #ff6e6e;
-
   border: none;
-
   border-radius: 4px;
-
   padding: 11px;
-
   box-shadow: none;
-
   margin-top: 35px;
-
   float: left;
-
   text-shadow: none;
-
   outline: none !important;
 }
-
 .register-photo form .btn-primary:hover,
 .register-photo form .btn-primary:active {
   background: #8e24aa;
 }
-
 .register-photo form .btn-primary:active {
   transform: translateY(1px);
 }
-
 .register-photo form .already {
   display: flex;
-
   text-align: center;
-
   font-size: 12px;
-
   color: #6f7a85;
-
   opacity: 0.9;
-
   text-decoration: none;
 }
 
-/*acaba css de registro*/
+/* Acaba css del registro */
 
-/* empieza el css de COMPONENT PRODUCT.JS*/
+/* empieza el css de COMPONENT PRODUCT.JS */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 .card4 {
@@ -851,13 +756,15 @@ label.radio input:checked + span {
   background-color: #dc3545;
   color: #fff;
 }
-
 .img-fluid {
   height: 500px;
   width: 500px;
 }
-/*TERMINA EL CSS DE COPONENT PRODUCT.JS */
+
+/* TERMINA EL CSS DE COPONENT PRODUCT.JS */
+
 /* empieza el css de PAGE PRODUCT */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 .card5 {
   width: 100%;
@@ -878,11 +785,11 @@ label.radio input:checked + span {
   color: green;
 }
 .flex-row {
-  flex-direction: row!important;
+  flex-direction: row !important;
   justify-content: center;
 }
 .mt-2 {
-  margin-top: 0.5rem!important;
+  margin-top: 0.5rem !important;
   justify-content: center;
 }
 .titulop {
@@ -919,11 +826,14 @@ label.radio input:checked + span {
   display: grid;
   width: 58.33333333%;
 }
-.fondop{
+.fondop {
   background: url(https://img.freepik.com/foto-gratis/fondo-simple-textura-abstracta-neutral_53876-102511.jpg?w=2000);
 }
-/*ACABA EL CSS DE PAGE PRODUCT.JS */
-/* EMPIEZA EL LOADING */
+
+/* ACABA EL CSS DE PAGE PRODUCT.JS */
+
+/* EMPIEZA EL CSS DEL LOADING */
+
 #loader {
   bottom: 0;
   height: 175px;
@@ -965,59 +875,59 @@ label.radio input:checked + span {
   transform: scale(0);
   width: 87.5px;
 }
-#loader .dot:nth-child(7n+1) {
+#loader .dot:nth-child(7n + 1) {
   transform: rotate(45deg);
 }
-#loader .dot:nth-child(7n+1)::before {
+#loader .dot:nth-child(7n + 1)::before {
   animation: 2s linear 0.3s normal none infinite running load;
-  background: #EE82EE none repeat scroll 0 0;
+  background: #ee82ee none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+2) {
+#loader .dot:nth-child(7n + 2) {
   transform: rotate(90deg);
 }
-#loader .dot:nth-child(7n+2)::before {
+#loader .dot:nth-child(7n + 2)::before {
   animation: 2s linear 0.3s normal none infinite running load;
-  background: #DA70D6  none repeat scroll 0 0;
+  background: #da70d6 none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+3) {
+#loader .dot:nth-child(7n + 3) {
   transform: rotate(135deg);
 }
-#loader .dot:nth-child(7n+3)::before {
+#loader .dot:nth-child(7n + 3)::before {
   animation: 2s linear 0.4s normal none infinite running load;
-  background: #FF00FF none repeat scroll 0 0;
+  background: #ff00ff none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+4) {
+#loader .dot:nth-child(7n + 4) {
   transform: rotate(180deg);
 }
-#loader .dot:nth-child(7n+4)::before {
+#loader .dot:nth-child(7n + 4)::before {
   animation: 2s linear 0.5s normal none infinite running load;
-  background: #BA55D3 none repeat scroll 0 0;
+  background: #ba55d3 none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+5) {
+#loader .dot:nth-child(7n + 5) {
   transform: rotate(225deg);
 }
-#loader .dot:nth-child(7n+5)::before {
+#loader .dot:nth-child(7n + 5)::before {
   animation: 2s linear 0.6s normal none infinite running load;
-  background: #9400D3 none repeat scroll 0 0;
+  background: #9400d3 none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+6) {
+#loader .dot:nth-child(7n + 6) {
   transform: rotate(270deg);
 }
-#loader .dot:nth-child(7n+6)::before {
+#loader .dot:nth-child(7n + 6)::before {
   animation: 2s linear 0.7s normal none infinite running load;
-  background: #9932CC none repeat scroll 0 0;
+  background: #9932cc none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+7) {
+#loader .dot:nth-child(7n + 7) {
   transform: rotate(315deg);
 }
-#loader .dot:nth-child(7n+7)::before {
+#loader .dot:nth-child(7n + 7)::before {
   animation: 2s linear 0.8s normal none infinite running load;
-  background: #8B008B none repeat scroll 0 0;
+  background: #8b008b none repeat scroll 0 0;
 }
-#loader .dot:nth-child(7n+8) {
+#loader .dot:nth-child(7n + 8) {
   transform: rotate(360deg);
 }
-#loader .dot:nth-child(7n+8)::before {
+#loader .dot:nth-child(7n + 8)::before {
   animation: 2s linear 0.9s normal none infinite running load;
   background: #800080 none repeat scroll 0 0;
 }
@@ -1032,17 +942,18 @@ label.radio input:checked + span {
   width: 180px;
 }
 @keyframes load {
-100% {
-  opacity: 0;
-  transform: scale(1);
-}
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 @keyframes load {
-100% {
-  opacity: 0;
-  transform: scale(1);
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
-}
+
 /* ACABA EL CSS DE LOADING */
 
 /*EMPIEZA CSS DE MI PERFIL */
@@ -1051,36 +962,29 @@ label.radio input:checked + span {
   box-shadow: none;
   border-color: #9ab5ff
 }
-
 .profile-button {
   background: rgb(100, 178, 255);
   box-shadow: none;
-  border: none
+  border: none;
 }
-
 .profile-button:hover {
   background: #4fc7ff
 }
-
 .profile-button:focus {
   background: #68acff;
   box-shadow: none
 }
-
 .profile-button:active {
   background: #96cbff;
   box-shadow: none
 }
-
 .back:hover {
   color: #8bc5ff;
   cursor: pointer
 }
-
 .labels {
-  font-size: 11px
+  font-size: 11px;
 }
-
 .add-experience:hover {
   background: #6eadff;
   color: #fff;
@@ -1089,7 +993,8 @@ label.radio input:checked + span {
 }
 
 /*ACABA EL CSS DE MI PERFIL */
-/* EMPIEZA CSS DE PEDIDOS*/
+
+/* EMPIEZA CSS DE PEDIDOS */
 
 .nav-pills {
   --bs-nav-pills-border-radius: 0.375rem;
@@ -1097,186 +1002,154 @@ label.radio input:checked + span {
   --bs-nav-pills-link-active-bg: #92edff;
   justify-content: center;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family: 'Roboto', sans-serif;
-    
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 .container {
-    margin-top: 50px;
+  margin-top: 50px;
 }
-
 .container .table-wrap {
-    overflow-x: auto;
+  overflow-x: auto;
 }
-
 .container .table-wrap::-webkit-scrollbar {
-    height: 5px;
+  height: 5px;
 }
-
 .container .table-wrap::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #5D7ECD, #a0dbff);
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #5d7ecd, #a0dbff);
 }
-
-
-.table>:not(caption)>*>* {
-    padding: 2rem 0.5rem;
+.table > :not(caption) > * > * {
+  padding: 2rem 0.5rem;
 }
-
 .table tbody td input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: #eee;
-    position: relative;
-    border-radius: 3px;
-    cursor: pointer;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  position: relative;
+  border-radius: 3px;
+  cursor: pointer;
 }
-
 .table tbody td input[type="checkbox"]:after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
-    content: "\f00c";
-    color: #fff;
-    font-size: 15px;
-    display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  color: #fff;
+  font-size: 15px;
+  display: none;
 }
-
 .table tbody td input[type="checkbox"]:checked,
 .table tbody td input[type="checkbox"]:checked:hover {
-    background-color: #40bfc1;
+  background-color: #40bfc1;
 }
-
 .table tbody td input[type="checkbox"]:checked::after {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .table tbody td input[type="checkbox"]:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
-
 .table tbody td .img-container {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
-
 .table tbody td .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
-
 .table tbody,
 .table thead {
-    background-color: #fff;
+  background-color: #fff;
 }
-
 .table tbody tr td:nth-of-type(1) {
-    text-align: center;
-    min-width: 70px;
-    max-width: 70px;
+  text-align: center;
+  min-width: 70px;
+  max-width: 70px;
 }
-
 .table tbody tr td:nth-of-type(2) {
-    min-width: 300px;
-    max-width: 300px;
+  min-width: 300px;
+  max-width: 300px;
 }
-
-
 .table tbody tr td:nth-of-type(3) {
-    min-width: 150px;
-    max-width: 150px;
+  min-width: 150px;
+  max-width: 150px;
 }
-
 .table tbody tr td:nth-of-type(4) {
-    min-width: 300px;
-    max-width: 300px;
+  min-width: 300px;
+  max-width: 300px;
 }
-
 .table tbody tr td:nth-of-type(5) {
-    min-width: 50px;
-    max-width: 50px;
+  min-width: 50px;
+  max-width: 50px;
 }
-
 .table tbody tr {
-    box-shadow: 0px 2px 3px #1f1f1f1a;
+  box-shadow: 0px 2px 3px #1f1f1f1a;
 }
-
 .table thead tr {
-    border-bottom: 4px solid #E1F5FE;
+  border-bottom: 4px solid #e1f5fe;
 }
-
 .table tbody td .active,
 .table tbody td .waiting {
-    background-color: #B9F6CA;
-    color: #388E3C;
-    font-weight: 600;
-    padding: 1px 10px;
-    border-radius: 15px;
-    font-size: 0.9rem;
+  background-color: #b9f6ca;
+  color: #388e3c;
+  font-weight: 600;
+  padding: 1px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
 }
-
 .table tbody td .waiting {
-    background-color: #FFECB3;
-    color: #FFA000;
+  background-color: #ffecb3;
+  color: #ffa000;
 }
-
 .table tbody td .active .circle,
 .table tbody td .waiting .circle {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #388E3C;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #388e3c;
 }
-
 .table tbody td .waiting .circle {
-    background-color: #FFA000;
+  background-color: #ffa000;
 }
-
 .table tbody td .fa-times {
-    color: #D32F2F;
-    font-size: 0.9rem;
+  color: #d32f2f;
+  font-size: 0.9rem;
 }
-
 .fw-600 {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
-
 .fs-09 {
-    font-size: 0.9rem;
-    font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
-
 .text-grey {
-    color: #a8a8a8 !important;
+  color: #a8a8a8 !important;
 }
-
-
-@media(min-width: 992px) {
-    .container .table-wrap {
-        overflow: hidden;
-    }
+@media (min-width: 992px) {
+  .container .table-wrap {
+    overflow: hidden;
+  }
 }
 
 /* ACABA EL CSS DE PEDIDOS */
+
 /* EMPIEZA CSS DE CONTACT US */
+
 .container9{
   display:flex;
   justify-content:center;
   align-items:center;
 }
-
 .card9{
   height:500px;
   width:800px;
@@ -1299,6 +1172,7 @@ label.radio input:checked + span {
   overflow:hidden;
   cursor:pointer;
 }
+
 /*left-side-start*/
 .left-side .line1{
   height:350px;
@@ -1401,8 +1275,6 @@ label.radio input:checked + span {
  
   transform:scale(1.3);
 }
-
-
 .stats1 span{
   font-size:12px;
  font-weight:600;
