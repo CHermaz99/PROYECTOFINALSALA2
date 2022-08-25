@@ -1267,8 +1267,6 @@ label.radio input:checked + span {
  
   transform:scale(1.3);
 }
-
-
 .stats1 span{
   font-size:12px;
  font-weight:600;
@@ -1373,3 +1371,5 @@ input[type='text']{
 }
 
 /* ACABA EL CSS DE CONTACT US */
+
+/* NO UTILIZAR MÁS EL HOME.CSS ESTÁ MUY LLENO, MEJOR UTILIZAR EL INDEX.CSS DE MANERA ORGANIZADA */
