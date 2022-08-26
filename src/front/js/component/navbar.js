@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../styles/home.css";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetch(process.env.BACKEND_URL + "/api/category")
@@ -41,11 +42,18 @@ export const Navbar = () => {
             </button>
           </form>
           <div className="botones-user-cart">
-            <Link to="/registro">
-              <button type="button" className="btn btn-outline-secondary">
-                <i className="bi bi-person-circle fa-lg"></i>
-              </button>
-            </Link>
+            <button
+              type="button"
+              className="btn btn-outline-secondary"
+              onClick={() => {
+                localStorage.getItem("token")
+                  ? navigate("/personal")
+                  : navigate("/registro");
+              }}
+            >
+              <i className="bi bi-person-circle fa-lg"></i>
+            </button>
+
             <Link to="/carrito">
               <button type="button" className="btn btn-outline-secondary">
                 <i className="bi bi-bag-heart fa-lg"></i>
