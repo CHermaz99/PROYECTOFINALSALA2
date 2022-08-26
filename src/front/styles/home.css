@@ -963,7 +963,7 @@ label.radio input:checked + span {
   border-color: #9ab5ff
 }
 .profile-button {
-  background: rgb(100, 178, 255);
+  background: rgb(42, 149, 255);
   box-shadow: none;
   border: none;
 }
@@ -990,7 +990,7 @@ label.radio input:checked + span {
 .nav-pills {
   --bs-nav-pills-border-radius: 0.375rem;
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #92edff;
+  --bs-nav-pills-link-active-bg: #d69a1a;
   justify-content: center;
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -1000,9 +1000,7 @@ label.radio input:checked + span {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-.container {
-  margin-top: 50px;
-}
+
 .container .table-wrap {
   overflow-x: auto;
 }
