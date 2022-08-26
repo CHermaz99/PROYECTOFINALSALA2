@@ -95,7 +95,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       /* PUT para modificar datos de usuario en Area Personal */
 
       personal: async (user) => {
-        console.log("hola");
+        console.log("hola personal");
         const areapersonal = await fetch(
           process.env.BACKEND_URL + "/api/personal",
           {

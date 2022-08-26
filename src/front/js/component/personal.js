@@ -93,7 +93,17 @@ const Personal = () => {
                   <div className="row mt-2">
                     <div className="col-md-6">
                       <div class="input-text">
-                        <input type="text" required="required" />
+                        <input
+                          type="text"
+                          name="name"
+                          onChange={(event) => {
+                            setText({
+                              ...text,
+                              [event.target.name]: event.target.value,
+                            });
+                          }}
+                          required="required"
+                        />
                         <small>Nombre</small>
                       </div>
                     </div>
@@ -107,92 +117,129 @@ const Personal = () => {
                   <div className="row mt-3">
                     <div className="col-md-12">
                       <div class="input-text">
-                        <input type="text" required="required" />
+                        <input
+                          type="text"
+                          name="email"
+                          onChange={(event) => {
+                            setText({
+                              ...text,
+                              [event.target.name]: event.target.value,
+                            });
+                          }}
+                          required="required"
+                        />
                         <small>Email</small>
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div class="input-text">
-                        <input type="text" required="required" />
+                        <input
+                          type="text"
+                          name="address"
+                          onChange={(event) => {
+                            setText({
+                              ...text,
+                              [event.target.name]: event.target.value,
+                            });
+                          }}
+                          required="required"
+                        />
                         <small>Dirección</small>
                       </div>
                     </div>
                     <div className="col-md-12">
-                      <div class="input-text">
-                        <input type="text" required="required" />
+                      <div className="input-text">
+                        <input
+                          type="text"
+                          name="phone_number"
+                          onChange={(event) => {
+                            setText({
+                              ...text,
+                              [event.target.name]: event.target.value,
+                            });
+                          }}
+                          required="required"
+                        />
                         <small>Número de telefono</small>
                       </div>
                     </div>
                   </div>
-                  <div className="mt-5 text-center">
+                  <div className="form-group mt-5 text-center">
                     <button
+                      type="submit"
+                      value="editar"
                       className="btn btn-primary profile-button"
-                      type="button"
+                      onClick={() => {
+                        actions.personal(text).then(() => {
+                          navigate("/");
+                        });
+                      }}
                     >
                       Guardar cambios
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="p-3 py-5">
-                    <h4><b>Establece tus preferencias</b></h4>
-                  <div class="form-check form-switch">
+              <div className="col-md-4">
+                <div className="p-3 py-5">
+                  <h4>
+                    <b>Establece tus preferencias</b>
+                  </h4>
+                  <div className="form-check form-switch">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       role="switch"
                       id="flexSwitchCheckDefault"
                     />
                     <label
-                      class="form-check-label"
+                      className="form-check-label"
                       for="flexSwitchCheckDefault"
                     >
                       WOMEN'S WEAR
                     </label>
                   </div>
-                  <div class="form-check form-switch">
+                  <div className="form-check form-switch">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       role="switch"
                       id="flexSwitchCheckDefault"
                     />
                     <label
-                      class="form-check-label"
+                      className="form-check-label"
                       for="flexSwitchCheckDefault"
                     >
                       MEN'S WEAR
                     </label>
                   </div>
-                  <div class="form-check form-switch">
+                  <div className="form-check form-switch">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       role="switch"
                       id="flexSwitchCheckDisabled"
-                      
                     />
                     <label
-                      class="form-check-label"
+                      className="form-check-label"
                       for="flexSwitchCheckDisabled"
                     >
                       SNEAKERS
                     </label>
                   </div>
-                  <div class="form-check form-switch">
+                  <div className="form-check form-switch">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       role="switch"
                       id="flexSwitchCheckCheckedDisabled"
                       checked
                     />
                     <label
-                      class="form-check-label"
+                      className="form-check-label"
                       for="flexSwitchCheckCheckedDisabled"
                     >
-                       ¡TODOS LOS PRODUCTOS!
+                      ¡TODOS LOS PRODUCTOS!
                     </label>
                   </div>
                 </div>
@@ -201,7 +248,7 @@ const Personal = () => {
           </div>
         </div>
         <div
-          className="tab-pane fade"
+          classNameName="tab-pane fade"
           id="pills-profile"
           role="tabpanel"
           aria-labelledby="pills-profile-tab"
