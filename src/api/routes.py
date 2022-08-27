@@ -101,16 +101,17 @@ def get_user(id):
 
 #Area Personal
 
-@api.route('/personal/<int:id>', methods=['PUT'])
+@api.route('/personal', methods=['PUT'])
 @jwt_required()
 def modify_user():
     current_user = get_jwt_identity()
-    user = User.query.filter_by(email=current_user).first()
+    user = User.query.filter_by(id=current_user).first()
     user.name = request.json.get("name", None)
     user.phone_number = request.json.get("phone_number", None)
     user.email = request.json.get("email", None)
     user.address = request.json.get("address", None)
     user.password = request.json.get("password", None)
+
     try:
       db.session.commit()
 

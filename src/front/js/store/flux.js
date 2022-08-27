@@ -76,7 +76,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            /* Authorization: "Bearer" + token, */
           },
           body: JSON.stringify(user),
         });
@@ -102,7 +101,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
-              /* Authorization: "Bearer" + token, */
+              Authorization: "Bearer " + localStorage.getItem("token"),
             },
             body: JSON.stringify(user),
           }
