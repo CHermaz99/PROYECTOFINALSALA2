@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Carousel = () => {
   return (
@@ -14,8 +15,8 @@ const Carousel = () => {
           <h3>COLECCIÓN DE HOMBRE</h3>
 
          
-
-          <button className="btn btn-success buy-now"> VER </button>
+          
+          <Link to={"/category/2"} className="btn btn-success buy-now"> VER </Link>
         </div>
       </div>
       <div className="card text-center">
@@ -30,7 +31,7 @@ const Carousel = () => {
 
        
 
-          <button className="btn btn-success buy-now"> VER</button>
+          <Link to={"/category/1"} className="btn btn-success buy-now"> VER </Link>
         </div>
       </div>
       <div class="card text-center">
@@ -41,7 +42,7 @@ const Carousel = () => {
         <div class="about-product text-center">
           <h3> SNEAKERS</h3>
 
-          <button class="btn btn-success buy-now">Buy Now</button>
+          <Link to={"/category/3"} className="btn btn-success buy-now"> VER </Link>
         </div>
       </div>
     </div>

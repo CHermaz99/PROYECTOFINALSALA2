@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Client = () => {
   return (
     <div className="container">
@@ -19,7 +20,7 @@ const Client = () => {
               <ul className="social">
                 <li>
                   <a href="#" data-tip="Quick View">
-                    <i className="fa fa-eye"></i>
+                    <Link to={"/category/3"}  className="fa fa-eye"></Link>
                   </a>
                 </li>
 
