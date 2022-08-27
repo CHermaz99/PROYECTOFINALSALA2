@@ -99,6 +99,28 @@ def get_user(id):
     user = User.query.get(id)
     return jsonify(user.serialize())
 
+#Area Personal
+
+@api.route('/personal', methods=['PUT'])
+@jwt_required()
+def modify_user():
+    current_user = get_jwt_identity()
+    user = User.query.filter_by(id=current_user).first()
+    user.name = request.json.get("name", None)
+    user.phone_number = request.json.get("phone_number", None)
+    user.email = request.json.get("email", None)
+    user.address = request.json.get("address", None)
+    user.password = request.json.get("password", None)
+    try:
+      db.session.commit()
+
+      return jsonify({"message": "Se han modificado tus datos en DaRoom's satisfactoriamente"}), 201
+    except Exception as err:
+      print(str(err))    
+      return jsonify({"message": str(err)}), 500
+
+    return jsonify(data), 200
+
 def calculate_order_amount(items):
     # Replace this constant with a calculation of the order's amount
     # Calculate the order total on the server to prevent
