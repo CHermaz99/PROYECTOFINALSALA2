@@ -88,7 +88,7 @@ def login():
     print(data)
     user = User.query.filter_by(email= data['email'], password= data['password']).first()
     if not user:
-      return jsonify({"message": "Tu email o contraseÃ±a no son correctos", "loged": False}), 400
+      return jsonify({"message": "Tu email o contraseña no son correctos", "loged": False}), 400
     access_token = create_access_token(identity=user.id)
     
     return jsonify({"token": access_token, "loged": True}), 200
@@ -111,6 +111,8 @@ def modify_user():
     user.email = request.json.get("email", None)
     user.address = request.json.get("address", None)
     user.password = request.json.get("password", None)
+
+
     try:
       db.session.commit()
 
