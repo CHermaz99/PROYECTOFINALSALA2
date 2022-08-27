@@ -12,6 +12,7 @@ import { PaginaRegistro } from "./pages/paginaRegistro.js";
 import { PaginaLogin } from "./pages/paginaLogin";
 import { Cart } from "./pages/cart";
 import { PaginaPersonal } from "./pages/paginaPersonal";
+import { Payment } from "./pages/payment";
 
 import injectContext from "./store/appContext";
 
@@ -43,6 +44,7 @@ const Layout = () => {
             <Route element={<Product />} path="/product/:id" />
             <Route element={<PaginaPersonal />} path="/personal" />
             <Route element={<Cart />} path="/carrito" />
+            <Route element={<Payment />} path="/pago" />
             <Route element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />

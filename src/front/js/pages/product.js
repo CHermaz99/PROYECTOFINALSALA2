@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Product = () => {
@@ -73,9 +73,6 @@ export const Product = () => {
                 type="button"
               >
                 ADD TO CART
-              </button>
-              <button className="btn btn-success" type="button">
-                BUY NOW
               </button>
             </div>
           </div>
