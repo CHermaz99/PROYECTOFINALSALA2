@@ -41,9 +41,17 @@ const Layout = () => {
             <Route element={<PaginaRegistro />} path="/registro" />
             <Route element={<PaginaLogin />} path="/login" />
             <Route element={<Product />} path="/product/:id" />
-            <Route element={<PaginaPersonal />} path="/personal" />
+            {localStorage.getItem("token") ? (
+              <Route element={<PaginaPersonal />} path="/personal" />
+            ) : (
+              ""
+            )}
+
             <Route element={<Cart />} path="/carrito" />
-            <Route element={<h1>Not found!</h1>} />
+            <Route
+              element={<h1>Not found! Try logging in maybe?</h1>}
+              path="*"
+            />
           </Routes>
           <Footer />
         </ScrollToTop>

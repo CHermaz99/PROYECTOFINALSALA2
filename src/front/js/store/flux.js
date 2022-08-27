@@ -29,20 +29,20 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => data.json())
           .then((data) => setStore({ products: data }));
       },
-      
+
       addToCart: (product) => {
-        const store = getStore()
-        setStore({ cart: [...store.cart, product]})
+        const store = getStore();
+        setStore({ cart: [...store.cart, product] });
       },
 
       clearCart: () => {
-        setStore({ cart: []})
+        setStore({ cart: [] });
       },
 
       removeToCart: (productId) => {
-        const store = getStore() 
-        const products = store.cart.filter(c => c.id != productId);
-        setStore({ cart: products})
+        const store = getStore();
+        const products = store.cart.filter((c) => c.id != productId);
+        setStore({ cart: products });
       },
 
       postUser: () => {
@@ -83,6 +83,33 @@ const getState = ({ getStore, getActions, setStore }) => {
         console.log(logeo);
         if (logeo.ok) {
           const data = await logeo.json();
+          console.log(data);
+
+          localStorage.setItem("token", data.token);
+          setStore({ token: data.token, loged: data.loged });
+        } else {
+          alert("Error");
+        }
+      },
+
+      /* PUT para modificar datos de usuario en Area Personal */
+
+      personal: async (user) => {
+        console.log("hola personal");
+        const areapersonal = await fetch(
+          process.env.BACKEND_URL + "/api/personal",
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              /* Authorization: "Bearer" + token, */
+            },
+            body: JSON.stringify(user),
+          }
+        );
+        console.log(areapersonal);
+        if (areapersonal.ok) {
+          const data = await areapersonal.json();
           console.log(data);
 
           localStorage.setItem("token", data.token);
