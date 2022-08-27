@@ -162,7 +162,7 @@ const Personal = () => {
                         <div class="input-text">
                           <input
                             type="text"
-                            name="address"
+                            name="phone_number"
                             onChange={(event) => {
                               setText({
                                 ...text,
