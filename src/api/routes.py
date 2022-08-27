@@ -5,10 +5,12 @@ from flask import Flask, request, jsonify, url_for, Blueprint
 from api.models import db, User, Product, Category
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
-
+import stripe
+import json
+# This is your test secret API key.
+stripe.api_key = 'sk_test_51LakrAD6PMviDHCngv2eydyq5Kd9gYFgLkGrEObFcueT1ozLusNuaGvjtJmKldBmBZLyXq26O9hbPIb9cjdgeHEy00UMGa5T2L'
 
 api = Blueprint('api', __name__)
-
 
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
@@ -91,8 +93,6 @@ def login():
     
     return jsonify({"token": access_token, "loged": True}), 200
 
-
-
 @api.route('/user/<int:id>', methods=['GET'])
 @jwt_required()
 def get_user(id):
@@ -121,5 +121,24 @@ def modify_user():
       return jsonify({"message": str(err)}), 500
 
     return jsonify(data), 200
-    
 
+def calculate_order_amount(items):
+    # Replace this constant with a calculation of the order's amount
+    # Calculate the order total on the server to prevent
+    # people from directly manipulating the amount on the client
+    return sum(item.get("price") for item in items)
+
+@api.route('/create-payment-intent', methods=['POST'])
+def create_payment():
+    try:
+        data = json.loads(request.data)
+        intent = stripe.PaymentIntent.create(
+            amount=calculate_order_amount(data['items']),
+            currency='usd'
+        )
+
+        return jsonify({
+          'clientSecret': intent['client_secret']
+        })
+    except Exception as e:
+        return jsonify(error=str(e)), 403

@@ -35,6 +35,7 @@ class Product(db.Model):
     price = db.Column(db.Float)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
     category = db.relationship('Category', backref='product', lazy=True)
+    id_stripe = db.Column(db.String(120), nullable=True) 
 
 
     def __repr__(self):
@@ -46,6 +47,7 @@ class Product(db.Model):
             'name': self.name,
             'price': self.price,
             'image': self.image,
+            'id_stripe': self.id_stripe,
         }
 
     def serialize_detial(self):
