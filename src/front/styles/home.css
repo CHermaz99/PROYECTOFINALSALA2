@@ -14,6 +14,8 @@
 }
 .my-navbar .navbar-nav li a {
   color: white;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .navbar-nav {
   flex:auto;
@@ -30,7 +32,7 @@
   width: 50px;
   border-radius: 25px;
   text-align: center;
-  margin-left: 7px;
+  margin-left: 10px;
   --bs-btn-border-color: white;
 }
 .btn-outline-primary {
@@ -481,8 +483,8 @@ h3.h3 {
 .principal {
   text-align: center;
   padding-bottom: 0px;
-  margin-bottom: -45px;
-  margin-top: 20px;
+  margin-bottom: -60px;
+  margin-top: 35px;
 }
 .segundo {
   width: 100%;
@@ -493,6 +495,7 @@ h3.h3 {
   position: relative;
   filter: contrast(30);
   background-color: transparent;
+  margin-bottom: 20px;
 }
 .segundo h2 {
   font-size: 30px;
