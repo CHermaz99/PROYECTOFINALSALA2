@@ -1,29 +1,52 @@
 /* Comienza el CSS del carrito de compras */
 
 .bg-light {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
-    text-align: center;
-    font-style: italic;
-    font-family: monospace;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  text-align: center;
+  font-style: italic;
+  font-family: monospace;
 }
 .d-flex {
-    display: flex!important;
-    justify-content: center;
-    margin-bottom: 7px;
-    pointer-events: painted;
-    paint-order: markers;
+  display: flex !important;
+  justify-content: center;
+  margin-bottom: 7px;
+  pointer-events: painted;
+  paint-order: markers;
 }
 .text-uppercase {
-    text-transform: uppercase!important;
-    text-align: center;
+  text-transform: uppercase !important;
+  text-align: center;
 }
 
 /* Termina el CSS del carrito de compras */
-.bgpersonal{
-    background: url(https://img.freepik.com/foto-gratis/fondo-espacio-diseno-tono-tierra-beige_53876-102507.jpg?w=2000);
+
+/* Comienza el CSS del footer.js */
+
+#copy {
+  font-size: 14px;
+  margin-top: 5px;
+}
+#icon {
+  font-size: 36px;
+}
+#address {
+  font-size: 18px;
+}
+.darooms {
+  margin-top: 10px;
 }
 
-.bgprofile{
-    background: url(https://img.freepik.com/foto-gratis/fondo-espacio-diseno-tono-tierra-beige_53876-102507.jpg)
+/* Termina el CSS del footer.js */
+
+/* Comienza el CSS del ? */
+
+.bgpersonal {
+  background: url(https://img.freepik.com/foto-gratis/fondo-espacio-diseno-tono-tierra-beige_53876-102507.jpg?w=2000);
 }
+
+.bgprofile {
+  background: url(https://img.freepik.com/foto-gratis/fondo-espacio-diseno-tono-tierra-beige_53876-102507.jpg);
+}
+
+/* Termina el CSS del ? */

@@ -3,7 +3,7 @@
 .my-navbar {
   border: 0;
   border-radius: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.856);
 }
 .my-navbar .navbar-brand {
   color: white;
@@ -14,19 +14,37 @@
 }
 .my-navbar .navbar-nav li a {
   color: white;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.navbar-nav {
+  flex:auto;
+  justify-content: center;
+  display: flex;
 }
 .bi-bag-heart {
   color: white;
 }
-.btn-outline-secondary {
+.bi-person-circle {
+  color: rgb(255, 255, 255);
+}
+.btn-outline-success {
   width: 50px;
   border-radius: 25px;
   text-align: center;
+  margin-left: 10px;
+  --bs-btn-border-color: white;
 }
-.bi-person-circle {
-  color: white;
+.btn-outline-primary {
+  width: 50px;
+  border-radius: 25px;
+  text-align: center;
+  --bs-btn-border-color: white;
 }
-.bi-search {
+.navbar {
+  --bs-navbar-toggler-border-color: white;
+}
+.bi-justify {
   color: white;
 }
 
@@ -311,8 +329,9 @@ h3.h3 {
   display: block;
 }
 .product-grid2 .product-image2 img {
-  width: 100%;
-  height: auto;
+  width: 700px;
+  height: 700px;
+  object-fit: fill;
 }
 .product-image2 .pic-1 {
   opacity: 1;
@@ -464,8 +483,8 @@ h3.h3 {
 .principal {
   text-align: center;
   padding-bottom: 0px;
-  margin-bottom: -45px;
-  margin-top: 20px;
+  margin-bottom: -60px;
+  margin-top: 35px;
 }
 .segundo {
   width: 100%;
@@ -476,6 +495,7 @@ h3.h3 {
   position: relative;
   filter: contrast(30);
   background-color: transparent;
+  margin-bottom: 20px;
 }
 .segundo h2 {
   font-size: 30px;
