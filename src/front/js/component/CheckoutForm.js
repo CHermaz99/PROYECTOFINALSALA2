@@ -93,7 +93,7 @@ export default function CheckoutForm() {
         disabled={processing || disabled || succeeded}
         id="submit"
       >
-        <span id="button-text">
+        <span className="btn btn-sm bg-light border border-dark">
           {processing ? (
             <div className="spinner" id="spinner"></div>
           ) : (
