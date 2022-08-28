@@ -311,8 +311,9 @@ h3.h3 {
   display: block;
 }
 .product-grid2 .product-image2 img {
-  width: 100%;
-  height: auto;
+  width: 700px;
+  height: 700px;
+  object-fit: fill;
 }
 .product-image2 .pic-1 {
   opacity: 1;
