@@ -53,7 +53,6 @@ export const Navbar = () => {
             >
               <i className="bi bi-person-circle fa-lg"></i>
             </button>
-
             <Link to="/carrito">
               <button type="button" className="btn btn-outline-success">
                 <i className="bi bi-bag-heart fa-lg"></i>
