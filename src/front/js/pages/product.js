@@ -50,22 +50,6 @@ export const Product = () => {
                 {product.description}
               </span>
             </div>
-            <div className="d-flex align-items-center mt-2">
-              {" "}
-              <label className="radio">
-                {" "}
-                <input type="radio" name="ram" value="S" checked />{" "}
-                <span>S</span>{" "}
-              </label>{" "}
-              <label className="radio">
-                {" "}
-                <input type="radio" name="ram" value="M" /> <span>M</span>{" "}
-              </label>{" "}
-              <label className="radio">
-                {" "}
-                <input type="radio" name="ram" value="256GB" /> <span>L</span>{" "}
-              </label>{" "}
-            </div>
             <div className="mt-3">
               <button
                 onClick={() => addToCart(product)}
