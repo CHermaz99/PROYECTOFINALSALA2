@@ -3,7 +3,7 @@
 .my-navbar {
   border: 0;
   border-radius: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.856);
 }
 .my-navbar .navbar-brand {
   color: white;
@@ -15,18 +15,34 @@
 .my-navbar .navbar-nav li a {
   color: white;
 }
+.navbar-nav {
+  flex:auto;
+  justify-content: center;
+  display: flex;
+}
 .bi-bag-heart {
   color: white;
 }
-.btn-outline-secondary {
+.bi-person-circle {
+  color: rgb(255, 255, 255);
+}
+.btn-outline-success {
   width: 50px;
   border-radius: 25px;
   text-align: center;
+  margin-left: 7px;
+  --bs-btn-border-color: white;
 }
-.bi-person-circle {
-  color: white;
+.btn-outline-primary {
+  width: 50px;
+  border-radius: 25px;
+  text-align: center;
+  --bs-btn-border-color: white;
 }
-.bi-search {
+.navbar {
+  --bs-navbar-toggler-border-color: white;
+}
+.bi-justify {
   color: white;
 }
 
