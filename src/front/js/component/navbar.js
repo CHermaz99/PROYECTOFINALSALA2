@@ -15,11 +15,22 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg sticky-top my-navbar">
       <div className="container-fluid">
-        <Link to="/" className="btn navbar-brand ">
+        <Link to="/" className="navbar-brand">
           DA ROOM'S
         </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="bi bi-justify"></span>
+        </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav  mb-2 mb-lg-0">
             {categories.map((category, index) => {
               return (
                 <li className="nav-item" key={index}>
@@ -30,21 +41,10 @@ export const Navbar = () => {
               );
             })}
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            ></input>
-            <button className="btn btn-outline-secondary" type="submit">
-              <i className="bi bi-search fa-lg"></i>
-            </button>
-          </form>
           <div className="botones-user-cart">
             <button
               type="button"
-              className="btn btn-outline-secondary"
+              className="btn btn-outline-primary"
               onClick={() => {
                 localStorage.getItem("token")
                   ? navigate("/personal")
@@ -55,7 +55,7 @@ export const Navbar = () => {
             </button>
 
             <Link to="/carrito">
-              <button type="button" className="btn btn-outline-secondary">
+              <button type="button" className="btn btn-outline-success">
                 <i className="bi bi-bag-heart fa-lg"></i>
               </button>
             </Link>
