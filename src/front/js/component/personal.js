@@ -384,7 +384,7 @@ const Personal = () => {
                       </div>
                       <div className="textarea">
                         <textarea required="required"></textarea>
-                        <small>Tu duda</small>
+                        <small>Tus dudas</small>
                       </div>
                     </span>
                   </div>

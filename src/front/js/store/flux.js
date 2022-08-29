@@ -150,6 +150,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ demo: demo });
       },
 
+      /*Fetch orders*/
+
       getOrder: async () => {
         try {
           // fetching data from the backend

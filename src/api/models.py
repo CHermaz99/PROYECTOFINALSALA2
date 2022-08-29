@@ -72,7 +72,9 @@ class Category(db.Model):
         'id': self.id,
         'name': self.name,
     }
-   
+
+# Relativo a Orders
+
 class Items(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     price = db.Column(db.Float)

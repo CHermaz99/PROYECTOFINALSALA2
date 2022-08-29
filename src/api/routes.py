@@ -144,7 +144,7 @@ def create_payment():
     except Exception as e:
         return jsonify(error=str(e)), 403
 
-#Area Personal Order
+#Area Personal Orders
 
 @api.route('/order', methods=['GET'])
 @jwt_required()
