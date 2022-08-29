@@ -73,7 +73,7 @@ class Category(db.Model):
         'name': self.name,
     }
 
-# Relativo a Orders
+# Relativos a Orders
 
 class Items(db.Model):
     id = db.Column(db.Integer, primary_key=True)

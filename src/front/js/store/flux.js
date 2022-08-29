@@ -150,7 +150,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ demo: demo });
       },
 
-      /*Fetch orders*/
+      /*Fetch order en Area Personal*/
 
       getOrder: async () => {
         try {

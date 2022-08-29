@@ -293,7 +293,7 @@ const Personal = () => {
                             <div className="ps-3">
                               <div className="fw-600 pb-1">{order.name}</div>
                               <p className="m-0 text-grey fs-09">
-                                Realizado: {order.date}
+                                Pedido Realizado: {order.date}
                               </p>
                             </div>
                           </div>
