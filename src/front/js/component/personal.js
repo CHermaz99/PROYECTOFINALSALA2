@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -6,6 +6,9 @@ const Personal = () => {
   const navigate = useNavigate();
   const { store, actions } = useContext(Context);
   const [text, setText] = useState({});
+  useEffect(() => {
+    actions.getOrder();
+  }, []);
 
   return (
     <>
@@ -279,148 +282,49 @@ const Personal = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="align-middle alert" role="alert">
-                    <td>
-                      <input type="checkbox" id="check" />
-                    </td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <div className="img-container">
-                          <img
-                            src="https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-ES-Site/Sites-master/es/dw6b7323e1/BH6829_CMB_20.jpg?imwidth=915&impolicy=product"
-                            alt=""
-                          />
-                        </div>
-                        <div className="ps-3">
-                          <div className="fw-600 pb-1">mark@gmail.com</div>
-                          <p className="m-0 text-grey fs-09">
-                            Realizado: 03/02/2012
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="fw-600">Chaqueta de hombre</div>
-                    </td>
-                    <td>
-                      <div className="d-inline-flex align-items-center active">
-                        <div className="circle"></div>
-                        <div className="ps-2">Recibido</div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="btn p-0" data-bs-dismiss="alert">
-                        <span className="fas fa-times"></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="align-middle alert" role="alert">
-                    <td>
-                      <input type="checkbox" id="check" checked />
-                    </td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <div className="img-container">
-                          <img
-                            src="https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-ES-Site/Sites-master/es/dw2ce1eb87/EF1682_166_24.jpg?imwidth=915&impolicy=product"
-                            alt=""
-                          />
-                        </div>
-                        <div className="ps-3">
-                          <div className="fw-600 pb-1">pepa@gmail.com</div>
-                          <p className="m-0 text-grey fs-09">
-                            Realizado: 03/02/2012
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="fw-600">Vestido de mujer</div>
-                    </td>
-                    <td>
-                      <div className="d-inline-flex align-items-center waiting">
-                        <div className="circle"></div>
-                        <div className="ps-2">Preparando envio</div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="btn p-0" data-bs-dismiss="alert">
-                        <span className="fas fa-times"></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="align-middle alert" role="alert">
-                    <td>
-                      <input type="checkbox" id="check" />
-                    </td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <div className="img-container">
-                          <img
-                            src="https://es.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-chaqueta-de-ch%C3%A1ndal-lv-graphic-pr%C3%AAt-%C3%A0-porter--HNY86WJ67001_PM2_Front%20view.png?wid=1240&hei=1240"
-                            alt=""
-                          />
-                        </div>
-                        <div className="ps-3">
-                          <div className="fw-600 pb-1">mark@gmail.com</div>
-                          <p className="m-0 text-grey fs-09">
-                            Realizado: 03/02/2012
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="fw-600">
-                        CHAQUETA DE CHÁNDAL LV GRAPHIC
-                      </div>
-                    </td>
-                    <td>
-                      <div className="d-inline-flex align-items-center active">
-                        <div className="circle"></div>
-                        <div className="ps-2">Recibido</div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="btn p-0" data-bs-dismiss="alert">
-                        <span className="fas fa-times"></span>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="align-middle alert" role="alert">
-                    <td>
-                      <input type="checkbox" id="check" />
-                    </td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <div className="img-container">
-                          <img
-                            src="https://es.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-bolso-petite-malle-monogram-reverse-canvas-bolsos--M45960_PM2_Front%20view.png?wid=1240&hei=1240"
-                            alt=""
-                          />
-                        </div>
-                        <div className="ps-3">
-                          <div className="fw-600 pb-1">harry@gmail.com</div>
-                          <p className="m-0 text-grey fs-09">
-                            Realizado: 03/02/2012
-                          </p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="fw-600">BOLSO PETITE MALLE</div>
-                    </td>
-                    <td>
-                      <div className="d-inline-flex align-items-center waiting">
-                        <div className="circle"></div>
-                        <div className="ps-2">Preparando envio</div>
-                      </div>
-                    </td>
-                    <td>
-                      <div className="btn p-0" data-bs-dismiss="alert">
-                        <span className="fas fa-times"></span>
-                      </div>
-                    </td>
-                  </tr>
+                  {store.orders.map((order, index) => {
+                    return (
+                      <tr className="align-middle alert" role="alert">
+                        <td>
+                          <input type="checkbox" id="check" />
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="ps-3">
+                              <div className="fw-600 pb-1">{order.name}</div>
+                              <p className="m-0 text-grey fs-09">
+                                Realizado: {order.date}
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          {order.items.map((item) => {
+                            return (
+                              <div className="fw-600">
+                                {" "}
+                                {item.product.name}{" "}
+                              </div>
+                            );
+                          })}
+                        </td>
+                        <td>
+                          <div className="d-inline-flex align-items-center active">
+                            <div className="circle"></div>
+                            <div className="ps-2">
+                              {" "}
+                              {order.status_delivery}{" "}
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div className="btn p-0" data-bs-dismiss="alert">
+                            <span className="fas fa-times"></span>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>

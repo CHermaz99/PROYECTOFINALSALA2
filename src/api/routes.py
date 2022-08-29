@@ -143,3 +143,13 @@ def create_payment():
         })
     except Exception as e:
         return jsonify(error=str(e)), 403
+
+#Area Personal Order
+
+@api.route('/order', methods=['GET'])
+@jwt_required()
+def orders():
+  current_user = get_jwt_identity()
+  user = User.query.filter_by(id=current_user).first()
+  orders = [order.serialize() for order in user.order]
+  return jsonify(orders), 200
