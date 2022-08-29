@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../../styles/index.css";
 
 export const Footer = () => (
-  <footer className="footer mt-auto py-3 text-center">
+  <footer className="footer mt-auto text-center">
     <div className="container-fluid bg-dark text-white text-center">
       <div className="row align-items-start">
         <div className="darooms">
