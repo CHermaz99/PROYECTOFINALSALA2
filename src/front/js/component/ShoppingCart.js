@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // Codigo actualizado Stefany
 const ShoppingCart = () => {
   const { actions, store } = useContext(Context);
+  let total = 0;
   let items = [];
   return (
     <div className="container bg-white rounded-top" id="zero-pad">
@@ -24,7 +25,7 @@ const ShoppingCart = () => {
                     <article className="row">
                       {store.cart.map((item, index) => {
                         items = [...items, item.price];
-                        let total = items.reduce((a, b) => a + b);
+                        total = items.reduce((a, b) => a + b);
                         return (
                           <>
                             <CartItem
@@ -32,15 +33,15 @@ const ShoppingCart = () => {
                               data={item}
                               delFromCart={() => actions.removeToCart(item.id)}
                             />
-                            <div className="container">
-                              <h4> Total: {total}</h4>
-                            </div>
                           </>
                         );
                       })}
                     </article>
                   </div>
                 </div>
+              </div>
+              <div className="container">
+                <h4> Total: {total}</h4>
               </div>
               <button
                 button
@@ -105,4 +106,4 @@ export default ShoppingCart;
 
   export default ShoppingCart;
 
-Termina codigo backup Eric */ 
+Termina codigo backup Eric */

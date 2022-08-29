@@ -20,6 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       token: null,
       loged: false,
       cart: [],
+      orders: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -147,6 +148,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 
         //reset the global store
         setStore({ demo: demo });
+      },
+
+      /*Fetch order en Area Personal*/
+
+      getOrder: async () => {
+        try {
+          // fetching data from the backend
+          const resp = await fetch(process.env.BACKEND_URL + "/api/order", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+          });
+          const data = await resp.json();
+          setStore({ orders: data });
+          // don't forget to return something, that is how the async resolves
+          return data;
+        } catch (error) {
+          console.log("Error loading message from backend", error);
+        }
       },
     },
   };

@@ -72,7 +72,9 @@ class Category(db.Model):
         'id': self.id,
         'name': self.name,
     }
-   
+
+# Relativos a Orders
+
 class Items(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     price = db.Column(db.Float)
@@ -82,6 +84,15 @@ class Items(db.Model):
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
     product = db.relationship('Product', backref='items', lazy=True)
 
+    def serialize(self):
+        return {
+        'id': self.id,
+        'price': self.price,
+        'unit': self.unit,
+        'product': self.product.serialize(),
+
+    }
+
 class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     total_price = db.Column(db.Float)
@@ -89,3 +100,13 @@ class Order(db.Model):
     date = db.Column(db.DateTime, default=datetime.datetime.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     user = db.relationship('User', backref='order', lazy=True)
+
+    def serialize(self):
+        return {
+        'id': self.id,
+        'name': self.user.email,
+        'date': self.date,
+        'status_delivery': self.status_delivery,
+        "items": [item.serialize() for item in self.items]
+
+    }
