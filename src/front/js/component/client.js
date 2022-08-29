@@ -1,73 +1,115 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Client = () => {
   return (
-    <div className="d-flex align-items-center py-5 mh-100">    
-    
-        <div className="container">
-            <div id="mycarousel" className="carousel slide" data-bs-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-bs-target="#mycarousel" data-bs-slide-to="0" className="active"></li>
-                    <li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <div className="row">
-                            <div className="col-lg-6 ">
-                                <img src="https://lowpostactive.com/wp-content/uploads/2019/07/Startups-moda-1.jpg" className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="col-lg-6 ">
-                                <div className=" d-flex flex-column justify-content-center my-5 px-3">
-                                    <p className="review text-center">"Siempre consigo lo que busco, me encanta"</p>
-                                    <div className="name d-flex align-items-center justify-content-center">
-                                        <span className="fas fa-minus pe-1"></span>
-                                        <p className="m-0"> Marta</p>
-                                    </div>
-                                   
-                                </div>
-                            </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-4 col-sm-6">
+          <div className="product-grid2">
+            <div className="product-image2">
+              <a href="#">
+                <img
+                  className="pic-1"
+                  src="https://www.versace.com/dw/image/v2/ABAO_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwb95603a1/original/90_1003927-1A04155_5B040_16_SilverBaroqueSilkShirt-Shirts-versace-online-store_0_0.jpg?sw=748&sh=1050&sm=fit&sfrm=jpg"
+                />
+                <img
+                  className="pic-2"
+                  src="https://www.versace.com/dw/image/v2/ABAO_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwcd04467c/original/90_1003927-1A04155_5B040_18_SilverBaroqueSilkShirt-Shirts-versace-online-store_0_0.jpg?sw=748&sh=1050&sm=fit&sfrm=jpg"
+                />
+              </a>
+              <ul className="social">
+                <li>
+                  <a href="#" data-tip="Quick View">
+                    <Link to={"/category/3"}  className="fa fa-eye"></Link>
+                  </a>
+                </li>
 
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <div className="row">
-                            <div className="col-lg-6 ">
-                                <img src="https://img.freepik.com/foto-gratis/modelo-femenino-buen-humor-posando-despues-ir-compras_197531-16459.jpg?w=2000" className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="col-lg-6 ">
-                                <div className=" d-flex flex-column justify-content-center my-5 px-3">
-                                    <p className="review text-center">"Los envios son rápidos"</p>
-                                    <div className="name d-flex align-items-center justify-content-center">
-                                        <span className="fas fa-minus pe-1"></span>
-                                        <p className="m-0">Carla</p>
-                                    </div>
-                                   
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                        <div className="row">
-                            <div className="col-lg-6 ">
-                                <img src="https://thumbs.dreamstime.com/b/foto-de-perfil-completo-un-hombre-guapo-saltando-tienda-alta-velocidad-comprando-ropa-sostiene-muchas-bolsas-llevan-negra-compras-163878019.jpg" className="d-block w-100" alt="..."/>
-                            </div>
-                            <div className="col-lg-6 ">
-                                <div className=" d-flex flex-column justify-content-center my-5 px-3">
-                                    <p className="review text-center">" Toda la ropa me llego en perfecto estado!"</p>
-                                    <div className="name d-flex align-items-center justify-content-center">
-                                        <span className="fas fa-minus pe-1"></span>
-                                        <p className="m-0">Lorenzo</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+                <li>
+                  <a href="#" data-tip="Add to Cart">
+                    <i className="fa fa-shopping-cart"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+            <div className="product-content">
+              <h3 className="title">
+                <a href="#">CAMISA DE SEDA SILVER BAROQUE</a>
+              </h3>
+              <span className="price">950 €</span>
+            </div>
+          </div>
         </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="product-grid2">
+            <div className="product-image2">
+              <a href="#">
+                <img
+                  className="pic-1"
+                  src="https://www.versace.com/dw/image/v2/ABAO_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwf8381fef/original/90_1005835-1A04072_6D160_16_DenimPatchworkOvershirt-BlousesandTops-versace-online-store_0_0.jpg?sw=748&sh=1050&sm=fit&sfrm=jpg"
+                />
+                <img
+                  className="pic-2"
+                  src="https://www.versace.com/dw/image/v2/ABAO_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dw2de5c3d1/original/90_1005835-1A04072_6D160_18_DenimPatchworkOvershirt-BlousesandTops-versace-online-store_0_0.jpg?sw=748&sh=1050&sm=fit&sfrm=jpg"
+                />
+              </a>
+              <ul className="social">
+                <li>
+                  <a href="#" data-tip="Quick View">
+                    <i className="fa fa-eye"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" data-tip="Add to Cart">
+                    <i className="fa fa-shopping-cart"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product-content">
+              <h3 className="title">
+                <a href="#">SOBRECAMISA VAQUERA DE PATCHWORK</a>
+              </h3>
+              <span className="price">1.790 €</span>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <div className="product-grid2">
+            <div className="product-image2">
+              <a href="#">
+                <img
+                  className="pic-1"
+                  src="https://media.gq.com.mx/photos/6064ab7cc94329bc868c410f/master/pass/bad%20bunny%20adidas%20forum.jpg"
+                />
+                <img
+                  className="pic-2"
+                  src="https://media.gq.com.mx/photos/6064ab78798c042a70dae331/master/w_1600,c_limit/bad%20bunny%20adidas%20forum%20rosas.jpg"
+                />
+              </a>
+              <ul className="social">
+                <li>
+                  <a href="#" data-tip="Quick View">
+                    <i className="fa fa-eye"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" data-tip="Add to Cart">
+                    <i className="fa fa-shopping-cart"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="product-content">
+              <h3 className="title">
+                <a href="#">BAD BUNNY X ADIDAS FORUM</a>
+              </h3>
+              <span className="price">600€</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

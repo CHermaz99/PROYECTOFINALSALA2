@@ -25,7 +25,6 @@ const Registro = () => {
         >
           <h2 className="text-center">
             <strong>Adentrate</strong>
-            <br></br>
             en Da Room's!
           </h2>
 
@@ -100,12 +99,12 @@ const Registro = () => {
               placeholder="Confirm Password"
             />
           </div>
-          <br></br>
+
           <div className="form-group">
             <div className="form-check">
               <label className="form-check-label">
-                <input className="form-check-input" type="checkbox" />
-                De acuerdo con los términos de uso
+                <input className="form-check-input" type="checkbox" />I agree to
+                the license terms.
               </label>
             </div>
           </div>
@@ -115,16 +114,16 @@ const Registro = () => {
               type="submit"
               value="registrate"
               className="btn btn-primary btn-block"
-              onClick={() => alert("Sign in")}
             >
-              Regístrate
+              onClick={() => alert("Sign in")}
+              <Link to="/login"></Link>
+              Sign Up
             </button>
           </div>
-          <br></br>
-          <a className="already" href="/login">
-            ¿Tienes cuenta?<h5>Entra si ya eres usuario</h5>
+
+          <a className="already" href="#">
+            You already have an account? Login here.
           </a>
-          <br></br>
         </form>
       </div>
     </div>
