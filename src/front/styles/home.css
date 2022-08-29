@@ -1,5 +1,8 @@
 /* comienza css del navbar */
 
+ul{
+  list-style: none;
+}
 .my-navbar {
   border: 0;
   border-radius: 0;

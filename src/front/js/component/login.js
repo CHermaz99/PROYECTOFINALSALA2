@@ -45,7 +45,7 @@ const Login = () => {
           <br></br>
           <div className="form-group">
             <input
-              type="text"
+              type="password"
               name="password"
               onChange={(event) => {
                 setText({ ...text, [event.target.name]: event.target.value });

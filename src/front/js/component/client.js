@@ -21,7 +21,7 @@ const Client = () => {
                 <ul className="social">
                   <li>
                     <a href="#" data-tip="Quick View">
-                      <Link to={"/category/3"} className="fa fa-eye"></Link>
+                      <Link to={"/category/3"} ><i className="fa fa-eye"></i></Link>
                     </a>
                   </li>
 
