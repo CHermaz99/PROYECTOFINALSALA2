@@ -1,23 +1,16 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { useParams, Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 
-/*
-    const Product = (props) => {
-        return <div classNameName="card7">
-            <img src={props.image} classNameName="card-img-top" alt="..." />
-            <div classNameName="card-body">
-                <h5 classNameName="card-title">{props.name}</h5>
-                <p classNameName="card-text">Price: {props.price}$</p>
-                <Link to={`/product/${props.id}`} classNameName="btn btn-primary">
-                    Detail
-                </Link>
-            </div>
-    </div>
-    }
-*/
+export const Product = (props) => {
+  const [product, setProduct] = useState();
+  const params = useParams();
+  const { actions, store } = useContext(Context);
+  const addToCart = (product) => {
+    actions.addToCart(product);
+  };
 
-const Product = (props) => {
   return (
     <div className="container-fluid mt-3 mb-3">
       <div className="row g-2">
@@ -68,19 +61,23 @@ const Product = (props) => {
                   </label>{" "}
                 </div>
               </div>
-              <Link
-                to={`/product/${props.id}`}
-                className="btn btn-danger btn-block mt-3"
-              >
-                Ver más
-              </Link>
-              <button
-                onClick={() => addToCart(product)}
-                className="btn btn-info btn-block"
-                type="button"
-              >
-                ADD TO CART
-              </button>
+              <div>
+                <Link
+                  to={`/product/${props.id}`}
+                  className="btn btn-danger btn-block mt-3"
+                >
+                  Ver más
+                </Link>
+              </div>
+              <div>
+                <button
+                  onClick={() => addToCart(props.product)}
+                  className="btn btn-danger btn-block mt-3"
+                  type="button"
+                >
+                  ADD TO CART
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -94,6 +91,24 @@ Product.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   image: PropTypes.string,
+  product: PropTypes.object,
 };
 
 export default Product;
+
+/* Copia backup
+
+  const Product = (props) => {
+      return <div classNameName="card7">
+          <img src={props.image} classNameName="card-img-top" alt="..." />
+          <div classNameName="card-body">
+              <h5 classNameName="card-title">{props.name}</h5>
+              <p classNameName="card-text">Price: {props.price}$</p>
+              <Link to={`/product/${props.id}`} classNameName="btn btn-primary">
+                  Detail
+              </Link>
+          </div>
+  </div>
+  }
+
+*/

@@ -23,6 +23,7 @@ export const Categories = () => {
                 name={product.name}
                 price={product.price}
                 image={product.image}
+                product={product}
               />
             </div>
           );
