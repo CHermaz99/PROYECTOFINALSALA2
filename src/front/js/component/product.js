@@ -96,7 +96,7 @@ Product.propTypes = {
 
 export default Product;
 
-/* Copia backup
+/* Copia backup <<
 
   const Product = (props) => {
       return <div classNameName="card7">
