@@ -3,7 +3,8 @@ import CartItem from "./CartItem";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-// Codigo actualizado Stefany
+// Comienza codigo actualizado Stefany
+
 const ShoppingCart = () => {
   const { actions, store } = useContext(Context);
   let total = 0;
@@ -64,6 +65,7 @@ const ShoppingCart = () => {
 };
 
 export default ShoppingCart;
+
 // Termina codigo actualizado Stefany
 
 /* Empieza codigo backup Eric

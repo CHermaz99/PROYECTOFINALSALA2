@@ -32,51 +32,24 @@ export const Product = (props) => {
                   {props.price}$
                 </span>
               </div>
-              <div className="d-flex justify-content-between align-items-center mt-2">
-                <div className="ratings">
-                  {" "}
-                  <i className="fa fa-star"></i> <span>5</span>{" "}
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <div>
+                  <Link
+                    to={`/product/${props.id}`}
+                    className="ver_mas btn btn-danger btn-block mt-3 btn-lg"
+                  >
+                    VER MÁS 
+                  </Link>
                 </div>
-                <div className="size">
-                  {" "}
-                  <label className="radio">
-                    {" "}
-                    <input type="radio" name="size1" value="small" />{" "}
-                    <span>S</span>{" "}
-                  </label>{" "}
-                  <label className="radio">
-                    {" "}
-                    <input
-                      type="radio"
-                      name="size1"
-                      value="Medium"
-                      checked
-                    />{" "}
-                    <span>M</span>{" "}
-                  </label>{" "}
-                  <label className="radio">
-                    {" "}
-                    <input type="radio" name="size1" value="Large" />{" "}
-                    <span>L</span>{" "}
-                  </label>{" "}
+                <div>
+                  <button
+                    onClick={() => addToCart(props.product)}
+                    className="cart_1 btn btn-danger btn-block mt-3 btn-lg"
+                    type="button"
+                  >
+                    <i class="bi bi-cart3"></i>
+                  </button>
                 </div>
-              </div>
-              <div>
-                <Link
-                  to={`/product/${props.id}`}
-                  className="btn btn-danger btn-block mt-3"
-                >
-                  Ver mÃ¡s
-                </Link>
-              </div>
-              <div>
-                <button
-                  onClick={() => addToCart(props.product)}
-                  className="btn btn-danger btn-block mt-3"
-                  type="button"
-                >
-                  ADD TO CART
-                </button>
               </div>
             </div>
           </div>
