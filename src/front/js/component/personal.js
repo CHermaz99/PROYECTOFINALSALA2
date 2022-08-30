@@ -196,7 +196,7 @@ const Personal = () => {
                 </div>
                 <div className="col-md-4">
                   <div className="p-3 py-5">
-                    <h4>
+                    <h4 id="preferencias">
                       <b>Establece tus preferencias</b>
                     </h4>
                     <div className="form-check form-switch">
