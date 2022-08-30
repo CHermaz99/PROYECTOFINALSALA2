@@ -31,18 +31,18 @@ export const Product = () => {
             <div className="price">
               <span className="mr-2">
                 <i className="fa fa-rupee text-success"></i>
-                {product.price}$
+                <strong>{product.price} $</strong>
               </span>
             </div>
             <div className="d-flex flex-row">
-              <div className="icons mr-2">
+              <div className="estrellas icons mr-2">
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star-half-o"></i>
                 <i className="fa fa-star-o"></i>
               </div>
-              <span>1200 ratings &amp; 564 reviews</span>
+              <span id="ratings">1200 ratings &amp; 564 reviews</span>
             </div>
             <div className="d-flex align-items-center mt-4 offers mb-1">
               <i className="fa fa-check-square-o mt-1"></i>
@@ -56,7 +56,7 @@ export const Product = () => {
                 className="btn btn-dark mr-2"
                 type="button"
               >
-                ADD TO CART
+                ADD TO CART <i class="bi bi-cart3"></i>
               </button>
             </div>
           </div>
