@@ -1019,6 +1019,18 @@ label.radio input:checked + span {
   color: #8bc5ff;
   cursor: pointer;
 }
+#pills-home {
+  margin-top: 110px;
+}
+.form-check {
+  margin-top: 10px;
+}
+#preferencias {
+  margin-bottom: 50px;
+}
+.text-right {
+  margin-bottom: 22px;
+}
 
 /*ACABA EL CSS DE MI PERFIL */
 
@@ -1166,7 +1178,12 @@ label.radio input:checked + span {
     overflow: hidden;
   }
 }
-
+#pills-profile {
+  margin-top: 50px;
+}
+#pills-tab {
+  margin-top: 20px;
+}
 /* ACABA EL CSS DE PEDIDOS */
 
 /* EMPIEZA CSS DE CONTACT US */
@@ -1184,6 +1201,7 @@ label.radio input:checked + span {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 150px;
 }
 .form {
   width: 100%;
