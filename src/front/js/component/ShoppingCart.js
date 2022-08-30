@@ -41,10 +41,10 @@ const ShoppingCart = () => {
                   </div>
                 </div>
               </div>
-              <div className="container">
+              <div className="prueba3 container">
                 <h4> Total: {total}</h4>
               </div>
-              <div class="btn-group" role="group" aria-label="Basic outlined example">
+              <div class="prueba2 btn-group" role="group" aria-label="Basic outlined example">
               <button type="button" class="btn btn-warning"
                 onClick={() => actions.clearCart()}
               >
