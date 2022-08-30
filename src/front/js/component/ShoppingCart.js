@@ -43,9 +43,8 @@ const ShoppingCart = () => {
               <div className="container">
                 <h4> Total: {total}</h4>
               </div>
-              <button
-                button
-                className="btn btn-sm bg-light border border-dark"
+              <div class="btn-group" role="group" aria-label="Basic outlined example">
+              <button type="button" class="btn btn-warning"
                 onClick={() => actions.clearCart()}
               >
                 Limpiar Carrito
@@ -54,6 +53,7 @@ const ShoppingCart = () => {
                 <Link className="btn btn-dark" to={"/pago"}>
                   Checkout
                 </Link>
+              </div>
               </div>
             </div>
           </div>
