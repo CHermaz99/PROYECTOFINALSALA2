@@ -66,7 +66,7 @@ export const Product = (props) => {
                   to={`/product/${props.id}`}
                   className="btn btn-danger btn-block mt-3"
                 >
-                  Ver más
+                  Ver mÃ¡s
                 </Link>
               </div>
               <div>
@@ -96,7 +96,7 @@ Product.propTypes = {
 
 export default Product;
 
-/* Copia backup
+/* Copia backup <<
 
   const Product = (props) => {
       return <div classNameName="card7">

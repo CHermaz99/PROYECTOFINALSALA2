@@ -25,11 +25,10 @@ const Login = () => {
           <br></br>
           <br></br>
           <h2 className="text-center">
-            <strong>Bienvenid@</strong>
-            <br></br>
-            <br></br>a Da Room's!
+            <div class="login1">
+              <h1>Bienvenid@ de nuevo</h1>
+            </div>
           </h2>
-
           <br></br>
           <br></br>
           <div className="form-group">
@@ -46,7 +45,7 @@ const Login = () => {
           <br></br>
           <div className="form-group">
             <input
-              type="text"
+              type="password"
               name="password"
               onChange={(event) => {
                 setText({ ...text, [event.target.name]: event.target.value });
@@ -70,7 +69,13 @@ const Login = () => {
               Entrar
             </button>
             <br></br>
-
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <br></br>
             <br></br>
             <br></br>
@@ -79,7 +84,6 @@ const Login = () => {
         </div>
       </div>
     </div>
- 
   );
 };
 
