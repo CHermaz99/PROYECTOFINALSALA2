@@ -24,7 +24,6 @@ const Client = () => {
                       <Link to={"/category/3"} ><i className="fa fa-eye"></i></Link>
                     </a>
                   </li>
-
                   <li>
                     <a href="#" data-tip="Add to Cart">
                       <i className="fa fa-shopping-cart"></i>

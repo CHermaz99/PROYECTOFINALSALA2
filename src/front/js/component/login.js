@@ -59,7 +59,7 @@ const Login = () => {
             <button
               type="submit"
               value="registrate"
-              className="btn btn-primary btn-block"
+              className="btn btn-danger btn-block"
               onClick={() => {
                 actions.login(text).then(() => {
                   navigate("/");
