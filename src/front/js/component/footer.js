@@ -12,7 +12,7 @@ export const Footer = () => (
           </Link>
         </div>
       </div>
-      <div id="address">Calle Gran Vía 12, 28002, MADRID</div>
+      <div id="address">Gran Vía 12, 28002, MADRID</div>
       <div id="copy">Copyright@DaRooms 2022</div>
       <div className="row align-items-center">
         <div className="col">
